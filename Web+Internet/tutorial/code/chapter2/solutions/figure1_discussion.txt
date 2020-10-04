@@ -1,0 +1,43 @@
+I have added some styling to the CSS to show what is happening when the figure is displayed. If you 'inspect' the elements when the webpage is displayed (Firefox: menu Tools... WebDeveloper... Inspector) you will see that the figure element has a default left and right margin of 40 pixels, whereas as a paragraph element has a default left and right margin of 0. So why is there a gap on the left hand side of the paragraph? The body element has a default left and right margin of 8 pixels. You can change this by adding the rule body { margin: 0; } to the CSS file which will set all the body element margins to 0. ]
+
+------------
+figure1.html
+------------
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>figure1</title>
+  <link rel="stylesheet" href="figure1.css">
+</head>
+
+<body>
+  <h1>Heading A</h1>
+  <figure>
+    <img src="tpot1.jpg" alt="a teapot" width="300">
+    <figcaption>A teapot</figcaption>
+  </figure>
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p>The quick brown fox jumped over the lazy dog.</p>
+</body>
+
+</html>
+
+-----------
+figure1.css
+-----------
+h1 {
+  color: blue;
+  background-color: orange;
+}
+
+p {
+  background-color: rgb(220,220,220);
+}
+
+figure {
+  background-color: yellow;
+  border: 1px solid grey;
+}

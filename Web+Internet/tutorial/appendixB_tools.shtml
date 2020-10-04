@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="appendixB">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+  
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+      
+    <h1>Appendix B: Tools</h1>
+
+    <h3>Using the Firefox Developer tools</h3>
+    <p>Open the Developer tools in Firefox by using the ‘hamburger’ menu (≡) near the top right of the window and
+      choosing Web Developer and then Toggle Tools (or, using Chrome, choose the ‘hamburger’ menu (three vertical dots), then More tools, then
+      Developer
+      tools). For Firefox and Chrome, a shortcut on Windows PCs is to use Ctrl-Shift-I. This will open a window at the bottom (or side)
+      of the browser window which can be used to inspect elements on the page by selecting the Inspector tab or the
+      small
+      symbol to the left of this tab. The box model can be shown (in Firefox by selecting the 'Layout' tab on the
+      right
+      hand side of this window), so that you can see the size of margins and padding for each element. As an example,
+      you
+      could change the padding for a paragraph using the following CSS rule:
+    </p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">p {
+  padding: 10px 50px 30px 200px;
+}</code>
+</pre>
+    </figure>
+
+    <p>where the measurements are listed (clockwise) in the order padding-top, padding-right, padding-bottom,
+      padding-left. The padding property is shorthand for setting each edge of the element separately.
+      You can also use it to examine the CSS rules applied to a specific element by highlighting the relevant element
+      and then selecting the tab on the right hand side that says ‘rules’. The inspector comes in very handy when the
+      complexity of the HTML and CSS files increases. You will find yourself using it a lot in future if your website
+      layout is not doing what you expect it to be doing – you can inspect individual elements to check which rules have
+      been applied to them. It will also come in useful when you do some JavaScript when the console and debugger tabs
+      become more useful.
+      The Developer tools are very useful and you should practise using them regularly – see
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox">https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox</a>
+      for further details. (You might also want to take a
+      look at the Firefox Developer Edition and its tools: <a
+        href="https://www.mozilla.org/en-US/firefox/developer/">https://www.mozilla.org/en-US/firefox/developer/</a>.)
+    </p>
+
+    <h3>Inspecting the source code of web pages</h3>
+
+    <p>It is possible to examine the source code of any website you visit by right clicking on the browser display area
+      and selecting the option to ‘View Page Source’. This can be useful if you want to examine how a particular effect
+      has been achieved on a web page that you visit. It is not, however, an excuse for plagiarism.</p>
+
+    <h3>Markup validation</h3>
+
+    <p>When you are developing a website it is a good idea to validate your code. (Note: If everyone in the class uses
+      the validators listed below at a similar time whilst using a particular computer lab, it is likely that the particular subnet of the University network will be
+      blocked temporarily by the validation service. This won't happen if you are running on your own computer at home.)</p>
+
+    <p><strong>HTML:</strong> W3C host a validator for HTML: <a href="http://validator.w3.org/">http://validator.w3.org/</a>. Validation can be done by uploading the relevant
+      file (or by URL if the file resides on a web server). There are ‘More Options’ to set the document type used.</p>
+    <p><em>Exercise:</em> You should validate one of the html files you have been working with.</p>
+    <p><strong>CSS:</strong> Likewise, you can validate your css file at the W3C’s CSS validation service: <a href="http://www.css-validator.org/">http://www.css-validator.org/</a>.
+    </p>
+    <p><em>Exercise:</em> You should validate one of the css files you have been working with.</p>
+    
+  </main>
+  
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

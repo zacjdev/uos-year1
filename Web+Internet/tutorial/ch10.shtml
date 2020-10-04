@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter10">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    <h1>Chapter 10. Summary</h1>
+
+    <p>These chapters have covered quite a bit of ground in learning HTML, CSS and JavaScript. The focus has been on
+      Responsive Web Design when creating web pages, in particular mobile-first responsive web design. For those of you
+      interested in following ongoing discussions on web development, or even taking part in those discussions, you should consider
+      the writings of <a href="https://rachelandrew.co.uk/">Rachel Andrew</a>, <a href="https://jakearchibald.com/">Jake Archibald</a>, <a href="https://aneventapart.com/speakers/dan-cederholm">Dan Cederholm</a>, <a href="https://hacks.mozilla.org/author/lclarkmozilla-com/">Lin Clark</a>, <a href="http://bradfrost.com">Brad Frost</a>, <a href="https://webstandardssherpa.com/about/authors/denise-jacobs/index.html">Denise Jacobs</a>, <a href="https://adactio.com">Jeremy
+        Keith</a>, <a href="https://ethanmarcotte.com">Ethan Marcotte</a>, <a href="https://jensimmons.com/">Jen Simmons</a>, <a href="https://www.sarasoueidan.com/">Sara Soueidan</a>, <a href="https://www.lukew.com">Luke
+        Wroblewski</a>, ...  There is also a collection of useful books published by <a href="https://abookapart.com">A Book
+        Apart</a>.</p>
+
+    <p>Bear in mind whenever you look at any source that things move quickly on the web, so articles that made sense a
+      few years ago may have been superceded, especially with regards their use of HTML and CSS. New ideas such as the use of
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">CSS Flexbox and Grid layouts</a> will mean that things that were difficult a few years ago (and which resulted in workarounds) can
+      now be done much more easily.</p>
+
+    <p>The focus of the module has been on front-end web development, particularly static web pages rather than dynamically-built
+      pages. The basics of JavaScript have been covered. However, there is much more remaining for your future learning. For
+      example, we have not covered server-side programming. Modules later in your degree programme will give you the opportunity to experience and practise this &ndash; see <a href="http://www.dcs.shef.ac.uk/intranet/teaching/public/modules/level3/com3420.html">COM3420 Software Hut</a>
+      and <a
+        href="http://www.dcs.shef.ac.uk/intranet/teaching/public/modules/level3/com3504.html">COM3504 The Intelligent
+        Web</a>.</p>
+
+        <h2>Epilogue: Transferable skills</h2>
+
+        <p>In creating this website, I have:</p>
+
+        <ul>
+          <li>Made decisions about what should be presented;</li>
+          <li>Made decisions about the ordering of information;</li>
+          <li>Decided what should be assumed and what should be explained &ndash; here, I gave more detail in the early chapters and less in later chapters, assuming you would have developed the ability to seek out relevant information as needed;</li>
+          <li>Linked to relaible information sources, in particular Mozilla's excellent resources &ndash; the aim here was to establish credibility;</li>
+          <li>Used appropriate language, taking care with spelling and grammar.</li>
+        </ul>
+          
+        <p>As you work through the modules in your degree programme, you will develop similar transferable skills for finding, understanding, filtering, organising and presenting information. </p>
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

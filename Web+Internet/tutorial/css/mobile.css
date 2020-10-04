@@ -1,0 +1,344 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~general tags~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body { 
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray; 
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4rem;
+  min-width: 320px;
+}
+
+h1, h2, h3 {
+  color: purple; 
+}
+
+h1 {  
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+p.surround {
+  border: 1px solid red;
+  padding: 0.5em;
+}
+
+span.update {
+  color: red;
+}
+
+.todo {
+  color: red;
+}
+
+a, a:visited {
+  color: blue;
+  text-decoration: underline dotted rgb(100,100,200);
+  background-color: rgb(246,246,238);
+  outline: none;
+}
+
+.clearboth {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#jumptotop {
+  position: fixed;
+  padding: 1rem;
+  right: 0;
+  bottom: 2%;
+  background-color: rgba(238,238,221,0.5);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~header~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+  margin: 0;
+  padding: 0 5%;
+  background-color: orange;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: purple;
+  font-family: Papyrus, serif;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~wrapper for nav and main~~~~~~~~~~~~~~~~~~~~ */
+
+#nav_main_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~navigation left~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+nav {
+  order: 1; 
+  padding: 0.5em 3%;
+  background-color: rgb(238,238,221);
+  color: gray;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+nav>ul {  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 1rem;
+  text-indent: -1.3rem;
+}
+
+nav>ul>li {
+  margin: 0;
+  padding: 0 auto;
+}
+
+nav a {
+  background-color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+nav a:link { color: purple; }
+
+nav a:visited { color: purple; }
+
+nav a:hover { 
+  color: orange;
+}
+
+nav li.li_extraspacebefore {
+  margin-top: 1rem;
+}
+
+#chapter1 .ch1, #chapter2 .ch2, #chapter3 .ch3,
+#chapter4 .ch4, #chapter5 .ch5, #chapter6 .ch6,
+#chapter7 .ch7, #chapter8 .ch8, #chapter9 .ch9
+#chapter10 .ch10 {
+  display: block;
+}
+
+#home a#homenav,
+#chapter1 a#ch1nav, #chapter2 a#ch2nav, #chapter3 a#ch3nav,
+#chapter4 a#ch4nav, #chapter5 a#ch5nav, #chapter6 a#ch6nav,
+#chapter7 a#ch7nav, #chapter8 a#ch8nav, #chapter9 a#ch9nav,
+#chapter10 a#ch10nav,
+#acknowledgements a#acknav,
+#references a#refnav,
+#appendixA a#appendixAnav, #appendixB a#appendixBnav,
+#appendixC a#appendixCnav {
+  color: orange;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~main content~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+main {
+  order: 2;
+  padding: 0.5rem 3%;
+  counter-reset: line;
+}
+
+main .highlight {
+  font-weight: bolder;
+}
+
+.solution {
+  font: bold;
+  color: red;
+}
+
+figure {
+  width: 95%;
+  border: 1px solid rgb(200,200,200);
+  margin: 0.5em 0 0.5em 1%;
+  padding: 0.5em;
+}
+
+figure.programcode {
+  border: none;
+  margin: 1rem auto;
+  padding: 0 auto;
+  text-align: center;  /* since pre is an inline block, this will then centre it */
+  width: 100%;
+  /*overflow: scroll; */
+}
+
+figure.figsmallish {
+  width: 70%;
+  max-width: 400px;
+}
+
+figure.figsmall {
+  width: 50%;
+  max-width: 300px;
+}
+
+figure.figextrasmall {
+  margin: 0.25em 0 0.25em 0.5em;
+  padding: 0.25em;
+  width: 25%;
+  max-width: 200px;
+}
+
+figure.middle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure>img, figure.figsmall>img, figure.figextrasmall>img, figure.figsmall>video, figure.figextrasmall>video {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*should it be column rather than row for mobile? */
+div.figgroup {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*border: 1px solid rgb(200,200,200); */
+}
+
+/* force figure caption to bottom of space */
+/*div.figgroup>figure {  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.figgroup>figure>img {
+  display: block;
+}*/
+
+figure>figcaption {
+  text-align: center; 
+  padding: 0.5em;
+}
+
+figure>figcaption span {
+  font-weight: bold;
+}
+
+/* not sure why I included this!!
+figure > hr {
+  margin: 0.5em;
+  border: none;
+  border-top: 1px solid rgb(200,200,200);
+}*/
+
+figure.balancedsidemargins {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code.d {
+  font: inherit;
+  color: rgb(25, 25, 61);
+}
+
+table, th, td {
+  border: 1px solid rgb(230,230,230);
+  border-collapse: collapse;
+  caption-side: bottom;
+  margin: 1em;
+  font-size: 0.8rem;
+}
+
+table.noborder th, table.noborder td {
+  border: 0;  
+}
+
+table.right {
+  float: right;
+}
+
+figure table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside p {
+  font-size: 0.8rem;
+}
+
+table > caption {
+  padding: 0.5em;
+}
+
+table > caption span {
+  font-weight: bold;
+}
+
+th,td {
+  padding: 0.25em;
+}
+
+table.width_restrict {
+  width: 50%;
+  min-width:200px;
+}
+
+aside {
+  overflow: auto;
+  background-color: rgba(238,238,221,0.5);
+  padding: 0.2rem 1rem 1rem 1rem;
+}
+
+aside > h1 {
+  font-size: 1.1rem;
+  color: rgb(50,50,50);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {
+  clear: both;
+  font-size: 0.75rem;
+  text-align: center;
+  border-top: 1px solid orange;
+  padding: 3px 5%;
+}
+
+footer p.report_an_error {
+  font-size: 1rem;
+}
+
+/* ~~~end~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

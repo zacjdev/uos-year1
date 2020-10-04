@@ -1,0 +1,26 @@
+h1 {
+  color: blue;
+  background-color: orange
+}
+
+.highlight {
+  color: blue;
+  font-style: italic;
+  padding: 0 5px;
+}
+
+.redgrey {
+  color: red;
+  background-color: rgb(200,200,200);
+}
+
+.largegreenfont {
+  font-family: Calibri, sans-serif;
+  font-size: 3em;
+  color: green;
+}
+
+.brown {
+  color: rgb(165, 93, 53 );
+  font-size: larger;
+}

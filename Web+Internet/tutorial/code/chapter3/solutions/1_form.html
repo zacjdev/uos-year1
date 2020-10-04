@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <!-- don't forget to change 'replace_this' for your email address -->
+  <form name="myform" action="mailto:replace_this@sheffield.ac.uk?subject=Test Email" 
+        enctype="text/plain" method="post" onsubmit="alert('Email should open now...');" >
+        <!-- the JavaScript in onsubmit is only for debugging purposes -->
+
+    <p>
+      <label for="from">Your name:</label>
+      <input type="text" name="from" id="from"
+             maxlength="40" size="20" placeholder="type your name..."  required>
+    </p>
+
+    <p>
+      <label for="email">Your e-mail:</label>
+      <input type="email" name="email" id="email" placeholder="type your email..."
+             maxlength="40" size="20" required>
+    </p>
+    
+    <p>
+      <label for="comments">Your comments:</label>
+      <textarea name="comments" id="comments" placeholder="type your comments..." rows="5" cols="50"></textarea>
+    </p>
+    
+    <p>
+      <input type="submit" name="submit" id="submit" value="Submit">
+      <input type="reset">
+    </p>
+
+</form>
+
+</body>
+
+</html>

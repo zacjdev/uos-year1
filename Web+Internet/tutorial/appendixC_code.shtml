@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="appendixC">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+  
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+      
+    <h1>Appendix C</h1>
+    
+    <p>All the program code: <a href="allcode.zip">allcode.zip</a>.
+    
+    <p>There are multiple subfolders in the download. Each of these subfolders contains a file
+      called index.html, which is an empty file. The reason for this is related to when the folder structure resides on
+      a properly-configured Web server. It prevents someone listing the contents of the folder, thus keeping the folder
+      contents anonymous.</p>
+      
+  </main>
+  
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

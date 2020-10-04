@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(124, 142, 143);
+  min-width: 320px;
+  margin: 0;
+}
+
+#wrapper {
+  background-color: rgb(152, 194, 144);
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: orange; 
+  padding: 0.5rem 3%;
+}
+
+header h1 {
+  background-color: rgb(85, 85, 236); 
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  background-color: rgb(162, 162, 190);
+  padding: 0.5rem 3%;
+}
+
+main h1 {
+  background-color: rgb(106, 106, 189);
+  font-size: 1.4rem;
+}
+
+main p {
+  background-color: rgb(200,215,255);
+}
+
+footer {
+  background-color: rgb(175, 196, 155);
+  padding: 0.5rem 3%;
+}
+
+footer p {
+  background-color: rgb(206, 127, 170);
+  margin: 0;
+}
+
+/* media rules ~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (min-width: 500px) {
+  header h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #wrapper { 
+    width: 80%; 
+    margin: 0 auto; 
+  }
+}

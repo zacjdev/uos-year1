@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter3">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    <h1>Chapter 3. Team X &ndash; a multi-page website</h1>
+
+    <figure class="figsmall right">
+      <img src="images/ch3_teamx_start_mobile.png" alt="teamx website">
+      <figcaption><span>Figure 3.1</span> TeamX website shown in Firefox's Responsive Design Mode</figcaption>
+    </figure>
+
+    <p>The aim of this chapter is to build up your expertise in using the features of HTML5 and CSS for a multi-page
+      website. This builds up two skills. First, you must get to grips with a website spread over multiple files,
+      consider how they are linked together and understand why they are stored in multiple folders. Second, you gain
+      some experience with advanced CSS properties which should give you the confidence to look up any new
+      properties yourself.</p>
+
+    <p>The chapter focuses on the creation of a multi-page website for Team X, a local sports club. Figure 3.1 shows the
+      home page of the website.</p>
+
+    <p>There are three sections in this chapter:</p>
+    <ol>
+      <li><a href="#3_1">The Team X site</a></li>
+      <li><a href="#3_2">Advanced CSS effects</a></li>
+      <li><a href="#3_3">Forms</a></li>
+    </ol>
+
+    <p><strong>Resources to download:</strong> The relevant files are included in the download in Appendix C.</p>
+
+    <h2 id="3_1">3.1 The Team X site</h2>
+
+    <p>We'll start with the teamx_start subfolder in the folder chapter3 of the download. This
+      contains the html files and subfolders for css files and image files. Figure 3.2 shows the folder structure.</p>
+
+    <figure class="figsmall right">
+      <img src="images/ch3_teamx_start_folders.png" alt="teamx folder hierarchy">
+      <figcaption><span>Figure 3.2</span> files in the teamx_start folder</figcaption>
+    </figure>
+
+    <p>Start by familiarising yourself with the files in the teamx_start folder. Load the index.html file into a Web
+      browser and explore the pages. Then open some of the html and css files into your favourite editor and explore
+      them.</p>
+
+    <p>One thing to note about the Team X website is that the items in the navigation area are in a row. This is achieved by 
+      displaying the list items inline. The next chapter will look at how to achieve this using a flexbox approach, which is a 
+      more flexible and modern solution. For now, we can ignore this as it does not affect the rest of this chapter.</p>
+
+    <h3>Exercises</h3>
+
+    <ol>
+      <li>Experiment with changing some of the style rules to familiarise yourself with the web site before you move on.
+        For example, change the colour of some of the text and the background-color of the header. Then change the
+        margin and padding of some of the elements. Make sure you reset the styles to their original values before attempting the next exercise.</li>
+      <li>Team X want an extra page that separates out the contact information from the ‘About Us’ page. ‘About Us’ will
+        concentrate on the history of the sports club and who is the current chair. The extra page, called
+        ‘Contact’, will contain information about how to contact the club, e.g. email, phone number and address. You
+        will need to create the extra page and add in some dummy (invented) information and also create an extra menu
+        item. Figure 3.3 shows a possible version of the Contact page &ndash; you can right click with the mouse on the image to display a bigger version.
+         Hint: copy the file aboutus.html to create
+        contact.html. Then edit each of these files. Edit all the html files to create the extra menu item that links to
+        contact.html. (It is somewhat annoying to add an extra menu item once a website has been built, 
+        since it involves updating the nav element in every relevant html file. It is better to sort this out at the design stage. 
+        The alternative is to use server-side includes &ndash; we'll look at this in lectures.) 
+        <span class="solution">[<a href="code/chapter3/solutions/teamx_with_contact">Solution</a>]</span></li>
+    </ol>
+
+    <figure class="figsmall right">
+      <img src="images/ch3_teamx_start_contact.png" alt="teamx website">
+      <figcaption><span>Figure 3.3</span> A Contact page for the Team X website</figcaption>
+    </figure>
+
+
+    <h2 id="3_2">3.2 Advanced CSS effects</h2>
+
+    <p>These sections experiment with some advanced CSS styling. Practising these with the
+      Team X site will help you to become more familiar with the different files needed for a multi-page website, as
+      well as understanding the complexities of adding more and more rules to a CSS file.</p>
+
+    <h3>3.2.1 Rounded corners using border-radius</h3>
+
+    <p>
+      The <a href="https://developer.mozilla.org/en/docs/Web/CSS/border-radius">border-radius</a> property can be used
+      to produce rounded corners for elements. For example, add border-radius
+      to one of the elements, such as the header (edit this in the file teamx_start\css\teamx.css):</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">header {
+  /* other properties */ 
+  border-radius: 20px; 
+}</code>
+</pre>
+    </figure>
+
+    <p>This will alter all the corners of the header. Note: if the body has a
+      white background and the header has a white background and no border and you change the border-radius, you will
+      see no effect – a white background on a white background will look no different whether or not the borders are
+      rounded. To more clearly see the effects, you could temporarily change the background-color property for the
+      relevant elements, e.g.
+    </p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">header {
+  /* other properties */ 
+  background-color: rgb(100,100,100);
+  border-radius: 20px; 
+}</code>
+</pre>
+    </figure>
+
+    <p>(Debugging: Adding a different background-color to each different element on a webpage is a useful technique for
+      checking your understanding of specific styling effects, since it does not change the size of any element it is
+      applied to and yet makes clear the area each element occupies.)</p>
+
+    <p>It is also possible to alter specific corners, and different corners can have different amounts of border-radius
+      applied to them to produce some interesting
+      effects:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">header { 
+  /* other properties */ 
+  border-top-left-radius: 30px; 
+  border-top-right-radius: 10px;
+}</code>
+</pre>
+    </figure>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Add rounded corners to the header element on the Team X website.</li>
+    </ol>
+
+
+    <h3>3.2.2 box-shadow</h3>
+
+    <p>The <a href="https://developer.mozilla.org/en/docs/Web/CSS/box-shadow">box-shadow</a> property can be used to add
+      shadows to an element’s surrounding box. For example, a shadow can be added to a
+      figure element using:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">main figure {
+  /* other properties */
+  box-shadow: 15px 15px 5px rgb(100,100,100);
+}</code>
+</pre>
+    </figure>
+
+    <p>This particular CSS rule is an example of a <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">descendant
+        combinator</a> and specifically targets figures nested inside a main element at any level of nesting. (Note:
+      there is a space between main and figure in the rule.) If main > figure is used as the selector, then only figures
+      that are children of main would be selected, not any other level of descendant. There are lots of other selection
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators">combinators</a> that you
+      should be aware of too.</p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Add a box shadow to the figures on the Team X website.</li>
+    </ol>
+
+    <h3>3.2.3 Pseudo-classes</h3>
+
+    <p>A pseudo-class is a “Keyword added to a [CSS] selector that specifies a special state of the element
+      to be selected” [<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Mozilla
+        pseudo-classes</a>].</p>
+
+    <p>In the teamx.css file, you will notice the following line:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">nav a:hover { color: orange; }</code>
+</pre>
+    </figure>
+
+    <p>This is an example of one of the most useful pseudo-classes, the ‘:hover’ pseudo-class. The rule above states
+      that when the mouse cursor is hovered over any anchor element
+      nested at any level inside a nav element the text colour should change to orange. (Again it could be more
+      restrictive by using <code class="language-css">nav</code>&nbsp;<code class="language-css">></code>&nbsp;<code class="language-css">a:hover</code> instead.) This indicates to the user that something
+      might happen if the text in the anchor element is clicked.</p>
+
+    <p>There are lots of other pseudo-classes to experiment
+      with, as listed at the Mozilla site. Some of these can be very useful in targetting specific html on a webpage,
+      rather than making use of lots of classes, some of which may only be applied to one element. An example is
+      <code class="d">:first-child</code> (see <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child">Mozilla :first-child</a>).
+    </p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Alter the Team X 'nav a:hover' rule to the following. Before displaying the results, predict what effect this
+        has.
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">nav a:hover {
+  color: orange;
+  background-color: rgb(20,150,20);
+  font-size: 3em; 
+}</code>
+</pre>
+        </figure>
+      </li>
+      <li>Add a hover effect to one of the other elements on the page. For example, you could add a box-shadow
+        when
+        the user hovers over a figure element, or even change the corners into rounded corners.
+      </li>
+    </ol>
+
+    <h3>3.2.4 Transitions</h3>
+
+    <p> <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Transitions</a>,
+      if not overdone, can add a little sophistication to a website.</p>
+
+    <p>In the preceding section, the hover effect was immediate when the mouse was moved on top of an element. We can
+      change that using a transition, which will change the speed with which an effect is applied. Consider the
+      following example, where the pair of rules will immediately add a box-shadow when the user hovers their mouse over
+      a figure element:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">main figure { 
+  /* other properties */ 
+}
+
+main figure:hover {
+  box-shadow: 7px 7px 5px rgb(100,200,100); 
+}</code>
+</pre>
+    </figure>
+
+    <p>Instead, we can add the following line into the first rule:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">main figure {
+  /* other properties */
+  transition: box-shadow 0.5s ease;
+}</code>
+</pre>
+    </figure>
+
+    <p>Now it will take 0.5s for the hover effect to fully change the listed properties.</p>
+
+    <p>Note: Not all properties are animatable: <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties</a>.
+    </p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Add a hover effect and a transition to one of the elements in the Team X website.</li>
+      <li>Add a HTML ‘aside’ element to one of the pages of the website. The aside should contain a <a
+          href="http://htmldog.com/techniques/pullquotes/">"pull quote"</a>.
+          <span class="solution">[<a href="code/chapter3/solutions/teamx_aside/aboutus.html">Solution</a>]</span></li>
+    </ol>
+
+    <p>The above effects can be used in a range of creative ways, for example: <a href="https://2016.uxlondon.com/speakers">https://2016.uxlondon.com/speakers</a>; <a href="https://chrisruppel.com/blog/css-animation-border-radius/">https://chrisruppel.com/blog/css-animation-border-radius/</a>; <a href="https://9elements.com/blog/css-border-radius/">https://9elements.com/blog/css-border-radius/</a>.</p>
+
+    <h3>3.2.5 Transforms</h3>
+
+    <p>Elements can be <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transformed</a> in a range
+      of different ways: translated, rotated, scaled and skewed. Subtle use of transforms can add something 'extra' to a
+      website. However, overuse can be annoying.</p>
+    <p>Consider the following example:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">main figure {
+  float: right;
+  margin: 10px 0 10px 3%;
+  border: 1px solid gray;
+  transition: box-shadow 0.4s ease, transform 0.7s ease;
+}
+
+main figure:hover {
+  box-shadow: 7px 7px 5px rgb(100,200,100);
+  transform: rotate(130deg);
+}</code>
+</pre>
+    </figure>
+
+    <p>
+      Here, a rotation of 130 degrees is applied to the figure element when the user hovers over it. Also, both the
+      box-shadow and the transform effects are transitioned. The transition property can be used to control
+      multiple things, using comma separation. The alternative is to transition all properties at once:<br><code
+        class="language-css">transition: all 0.5s ease;</code> However, this means that all the effects transition at
+      the same speed.
+    </p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Add a range of effects to one of the Team X webpages to make it as visually and interactively annoying as
+        possible.</li>
+    </ol>
+
+    <h3>3.2.6 CSS Animations</h3>
+
+    <p>It is also possible to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">animate CSS properties</a> for elements. For example, to animate the body element, add the following to your CSS file:
+
+      <pre><code class="language-css">body {
+  animation-duration: 3s;
+  animation-name: keep_rotating;
+  animation-iteration-count: infinite;
+}
+
+@keyframes keep_rotating {
+  from {
+    transform: rotate(0deg); 
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}</code></pre>
+    </p>
+
+
+    <h2 id="3_3">3.3 Forms</h2>
+
+    <p>Take a look at Mozilla's introduction to forms before you proceed: <a href="https://developer.mozilla.org/en/docs/Learn/HTML/Forms/Your_first_HTML_form">forms</a>.</p>
+
+    <h3>Exercises</h3>
+
+    <ol>
+      <li>
+        <p>Starting point: 'form2.html' (available in the Appendix C download for this
+          chapter).<br> Create a form that can be used to e-mail a person's name and a text comment to you. (Important: You will need
+          to use your own sheffield e-mail address in the form.)
+          <span class="solution">[<a href="code\chapter3\solutions\1_form.html">Solution</a>]</span></p>
+      </li>
+      <li>This exercise follows on from exercise 1 and involves changing the text field into a field containing a set of
+        checkboxes. Create a form that inputs a person's name and their likes and dislikes from a list that is
+        presented to them, e.g. the list might contain a list of foods or a list of sports. Each item in the list should
+        have a checkbox next to it and the user can thus select more than one item. The results should be e-mailed to
+        you. <span class="solution">[<a href="code\chapter3\solutions\2_form_checkboxes.html">Solution</a>]</span></li>
+        <li>This exercise involves combining the results from two previous exercises. In section 3.1 of this chapter, you created a contact page for the Team X website. In exercise 1 of this section on Forms, you created a form that can be used to e-mail a person's name and a text comment to you. Add this form to the Team X contact page. <span class="solution">[<a href="code\chapter3\solutions\teamx_with_contact_form\contact.html">Solution</a>]</span></li>
+    </ol>
+
+    <p>In Chapters 8 and 9, we will look at how form elements can be used to foster interaction with the user and create Graphical User Interfaces.</p>
+
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter5">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+
+    <h1>Chapter 5. CSS Custom Properties</h1>
+
+    <p>These are sometimes referred to as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS variables
+        or cascading variables</a>. Although a recent addition to CSS, they
+      have <a href="http://caniuse.com/#feat=css-variables">widespread support in browsers</a>.
+    </p>
+
+    <figure class="right figsmall">
+      <img src="images/ch5_cp1.png" alt="a website">
+      <figcaption><span>Figure 5.1:</span> cp1.html</figcaption>
+    </figure>
+
+    <p>A common use case is colour themes. Consider the html and
+      css code in cp1.html (Program Listing 5.1) and cp1.css (Program Listing 5.2). Figure 5.1 shows the resulting web
+      page layout. Notice
+      how the css code repeats the same colour in multiple places. CSS custom properties can be used to deal with this.
+    </p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="en">
+
+&lt;head>
+  &lt;meta charset="utf 8">
+  &lt;title>CP1&lt;/title>
+  &lt;link rel="stylesheet" href="cp1.css">
+&lt;/head>
+
+&lt;body>
+  &lt;header>
+    &lt;h1>My banner area&lt;/h1>
+  &lt;/header>
+
+  &lt;main>
+    &lt;h1>A heading&lt;/h1>
+    &lt;p>&lt;a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem
+    ipsum&lt;/a> ...&lt;/p>
+    &lt;p>...&lt;/p>
+    &lt;h2>Subsection&lt;/h2>
+    &lt;p>....&lt;/p>
+  &lt;/main>
+
+  &lt;footer>
+    &lt;p>&ampcopy; a web designer, 2019&lt;/p>
+  &lt;/footer>
+&lt;/body>
+&lt;/html></code>
+</pre>
+      <figcaption><span>Program listing 5.1:</span> cp1.html (which is also cp2.html)</figcaption>
+    </figure>
+
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">body {
+  margin: 0;
+  color: rgb(49,68,49);
+}
+
+header {
+  padding: 0.5em 3%;
+  background color: rgb(200,200,100);
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  overflow: hidden; /* or overflow: auto; */
+  margin: 0;
+  padding: 0 3%;
+  background color: rgb(240,240,160);
+}
+
+main h1 {
+  font size: 1.5em;
+}
+
+main h2 {
+  font size: 1.2em;
+}
+
+main a {
+  color: inherit;
+  text decoration: none;
+  background color: rgba(200, 200, 100, 0.85);
+  box shadow: 1px 1px 5px 2px rgba(200, 200, 100, 0.85);
+}
+
+main a:hover {
+  color: rgb(240,240,160);
+}
+
+footer {
+  padding: 0.5em 3%;
+  background color: rgb(200,200,100);
+}
+
+footer p {
+  margin: 0;
+}</code>
+</pre>
+      <figcaption><span>Program listing 5.2:</span> cp1.css.<br>(For more on overflow:hidden or overflow:auto, see <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">overflow</a>)</figcaption>
+    </figure>
+
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">:root {
+  text_A: rgb(49,68,49);
+  bkgrd_A: rgb(200,200,100);
+  text_A_translucent: rgba(200, 200, 100, 0.85);
+  bkgrd_main: rgb(240,240,160);
+}
+
+body {
+  margin: 0;
+  color: var( text_A);
+}
+
+header {
+  padding: 0.5em 3%;
+  backgroun d color: var(--bkgrd_A);
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 3%;
+  background color: var(--bkgrd_main);
+}
+
+main h1 {
+  font size: 1.5em;
+}
+
+main h2 {
+  font size: 1.2em;
+}
+
+main a {
+  color: inherit;
+  text decoration: none;
+  background color: var(--text_A_translucent);
+  box shadow: 1px 1px 5px 2px var(--text_A_translucent);
+}
+
+main a:hover {
+  color: var(--bkgrd_main);
+}
+
+footer {
+  padding: 0.5em 3%;
+  background color: var(--bkgrd_A);
+}
+
+footer p {
+  margin: 0;
+}</code>
+</pre>
+      <figcaption><span>Program listing 5.3:</span> cp2.css</figcaption>
+    </figure>
+
+    <figure class="right figsmall">
+      <img src="images/ch5_cp2.png" alt="a website">
+      <figcaption><span>Figure 5.2:</span> cp2.html</figcaption>
+    </figure>
+
+    <p>In Program Listing 5.3, CSS custom properties are used (producing the result in Figure 5.2, which is identical to Figure 5.1). These are declared in the rule that matches :root, as follows:</p>
+
+    <figure class="programcode clearboth">
+<pre>
+<code class="language-css">:root {
+  text_A: rgb(49,68,49);
+  bkgrd_A: rgb(200,200,100);
+  text_A_translucent: rgba(200, 200, 100, 0.85);
+  bkgrd_main: rgb(240,240,160);
+}</code>
+</pre>
+    </figure>
+
+    <p>Of course, more meaningful names could be given to the properties!!</p>
+    <p>The same could
+      be achieved using a rule for the html element, but :root is used as it has higher specificity. The aim is to make
+      the custom property global to every other css rule. By using :root, the custom property cascades to all the other
+      rules, since all the elements affected by the rules are children of the html element in the html file.</p>
+    <p>In this example,
+      four custom properties are defined.
+      They can be given any name. Given the cascade, these properties can now be accessed in other rules. For example,
+      in the rule for header we use the custom property to set background-color. This is done using the notation:</p>
+
+      <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">var(--name_of_custom_property)</code>
+</pre>
+        </figure>
+
+      <p>A particular example is:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">background-color: var(--bkgrd_A);</code>
+</pre>
+    </figure>
+
+    <p>
+      This matches with the custom property bkgrd_A, and thus it is as if we had written:</p>
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">background-color: rgb(200,200,100);</code>
+</pre>
+    </figure>
+    <p>
+      which is what we did in cp1.css.</p>
+    <p>The advantage of custom properties is that the same colour can be set in multiple rules. If we wanted to change
+      the colour in all of these rules, we only have to change the css file in one place, which is the :root rule. The
+      change then cascades to every other rule.</p>
+
+      <h3>Exercise</h3>
+      <ol>
+        <li>Add custom properties to one of your solutions to a previous exercise. (Use better names than text_A, etc!!)</li>
+      </ol>
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

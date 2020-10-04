@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+  <meta name="author" content="Steve Maddock">
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+
+    const ROWS = 5;
+    const COLS = 5;
+
+    // functions
+    
+    function displayGrid(grid) {
+    // document.write('<p>'+grid+'</p>');
+      for (var i=0; i<ROWS; ++i) {
+        for (var j=0; j<COLS; ++j) {
+          document.write(grid[i][j]+"&nbsp;&nbsp;&nbsp;");
+        }
+        document.write("<br>");
+      }
+    }
+  
+    // main program
+  
+    var grid = []; //new Array(ROWS);
+    var number;
+
+    for (var i=0; i<ROWS; ++i) {
+      grid[i] = new Array(COLS); // or grid.push([]);
+    }
+  
+    for (var i=0; i<ROWS; ++i) {
+      for (var j=0; j<COLS; ++j) {
+        number = (Math.random()<0.5) ? 0 : 1;
+        //console.log('<p>'+number+'</p>'); // testing
+        grid[i][j] = number;  // or grid[i].push(number);
+      }
+    }
+
+    displayGrid(grid);
+    document.write("<br><br>");
+  
+    // add 2 to the value stored at four random locations
+    document.write("<p>add 2 to the value stored at four random locations. (Remember that index starts at 0.)</p>");
+
+    for (var i=0; i<4; ++i) {
+      var row = Math.floor(Math.random()*ROWS);
+      var col = Math.floor(Math.random()*COLS);
+      document.write("row index, col index: "+row+", "+col+"<br><br>");
+      grid[row][col] = grid[row][col]+2;
+    }
+
+    displayGrid(grid);
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript example</title>
+  <meta name="author" content="Steve Maddock">
+</head>
+
+<body>
+
+  <p>Javascript exercise 4</p>
+
+  <script>
+    "use strict";
+    
+    var now = new Date();
+    
+    var daynames = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"];
+    var day = now.getDay();
+    var daystr = daynames[day]+"day";
+    document.write("<p>" + daystr + "</p>");
+    
+    document.write("<p>" + now.getDate() + "</p>");
+    
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July",
+                    "August", "September", "October", "November", "December"];
+    var month = now.getMonth();
+    var monthstr = monthNames[month];
+    document.write("<p>" + monthstr + "</p>");
+    
+    document.write("<p>" + now.getFullYear() + "</p>");
+    
+    document.write("<p>"+now.toDateString()+"</p>");
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.write("<p>"+now.toLocaleDateString('en-GB', options)+"</p>");
+  </script>
+
+</body>
+</html>

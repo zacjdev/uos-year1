@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter1">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    <h1>Chapter 1. Introduction</h1>
+
+    <p>There are many ways to create web pages, including writing HTML and CSS using a text editor, using tools such as
+      <a href="https://jekyllrb.com">Jekyll</a> or <a href="https://gohugo.io">Hugo</a> or <a href="https://www.11ty.dev/">Eleventy</a>, using content management
+      systems (e.g. <a href="https://wordpress.com">WordPress</a>, <a href="https://www.drupal.org">Drupal</a>, <a
+        href="https://www.joomla.org">Joomla!</a>) or maintaining a code base on a web server and using PHP and/or other
+      languages to dynamically produce web pages. In this module, we will focus on directly writing HTML, CSS and
+      JavaScript, without any accompanying libraries. I believe that this will give you the foundations to build on in the future. In addition, there are
+      advantages to understanding all three of these languages. For more discussion of why it is important to learn
+      HTML, see <a href="https://www.petelambert.com/journal/html-is-the-web/">HTML is the Web</a>.</p>
+
+    <p>The early chapters of this website focus on HTML and CSS, and using these in mobile-first responsive web design, which is what is advocated on this module &ndash; we'll discuss this in lectures, but you might like to take a look at the websites of <a
+      href="https://ethanmarcotte.com">Ethan Marcotte</a> and <a href="https://www.lukew.com">Luke
+      Wroblewski</a>. Whilst this material is covered in lectures, I have
+      also included some explanation of the main ideas mixed in with the exercises. This will help remind you of relevant
+      ideas before undertaking the exercises.</p>
+
+    <p>Suggested solutions are given for each exercise. However, for many of the exercises there is no single correct
+      solution, so please bear in mind that your solution for a particular exercise may be just as good as the suggested one, even if it is different. </p>
+
+    <p>Throughout the early chapters, I make use of the <a href="https://developer.mozilla.org/en-US/docs/Learn"
+        target="_blank">excellent resources supplied by Mozilla</a>, providing links to their relevant pages on HTML and CSS.
+      I suggest you make their website your first port of call if you are looking up a feature on HTML or CSS. Whilst you
+      could use a general Internet search to find out about particular features, you should be wary of out-of-date
+      information. It is important that when you search for information, you 'weigh' the reliability of the information.
+      I believe the Mozilla site provides reliable information.</p>
+
+    <p>The latter chapters of this website focus on JavaScript. For the individual chapters, I have focussed only on
+      presenting the exercises and their solutions, rather than giving any introduction to specific JavaScript. The
+      module lectures will do this. Also, you need to practise searching for relevant information yourself. However, to get you started, I have given links to specific pages on Mozilla's website and also other websites, as appropriate.</p>
+
+    <p>Some of you may have met HTML and/or CSS and/or JavaScript before. Nonetheless, I encourage you to read through
+      the relevant sections so that you are aware of techniques I expect to see in your assignment work.</p>
+
+    <h3>Example code</h3>
+
+    <p>Appendix C includes a zip file to download all the HTML, CSS and JavaScript code for each chapter. These are
+      organised into a series of folders, one per chapter. (Appendix A presents a short overview of files and folders if
+      these terms are unfamiliar to you.)</p>
+
+    <h3>Development</h3>
+
+    <p>I do not advocate a specific editor to develop your code. I have used <a
+        href="https://notepad-plus-plus.org">Notepad++</a> and <a href="https://code.visualstudio.com">Visual Studio
+        Code</a> when developing both the website and the exercise solutions. Some of you may prefer something more
+      complex such as an IDE (Integrated Development Environment). For the size of example we are looking at, I have found Notepad++ and Visual Studio Code to be more than adequate. You should install one or both of these on your computer.</p>
+
+      <h3>Typos and errors</h3>
+
+      <p>If you spot any <a href="https://www.oed.com/view/Entry/208379?rskey=C212c5&result=1&isAdvanced=false#eid">typo</a>s or errors, please do let me know using the link in the footer below.</p>
+
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

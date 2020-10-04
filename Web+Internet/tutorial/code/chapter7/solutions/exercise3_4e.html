@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+  <meta name="author" content="Steve Maddock">
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+
+    const ROWS = 5;
+    const COLS = 5;
+  
+    // functions
+  
+    function displayGrid(grid) {
+      // document.write('<p>'+grid+'</p>');
+      for (var i=0; i<ROWS; ++i) {
+        for (var j=0; j<COLS; ++j) {
+          document.write(grid[i][j]+"&nbsp;&nbsp;&nbsp;");
+        }
+        document.write("<br>");
+      }
+    }
+
+    // main program
+  
+    var grid = []; //new Array(ROWS);
+    var number;
+
+    for (var i=0; i<ROWS; ++i) {
+      grid[i] = new Array(COLS); // or grid.push([]);
+    }
+  
+    for (var i=0; i<ROWS; ++i) {
+      for (var j=0; j<COLS; ++j) {
+        number = (Math.random()<0.5) ? 0 : 1;
+        //console.log('<p>'+number+'</p>'); // testing
+        grid[i][j] = number;  // or grid[i].push(number);
+      }
+    }
+
+    displayGrid(grid);
+    document.write("<br><br>");
+  
+    // test for a horizontal line of three 1s
+    var result = false;
+    for (var i=0; i<ROWS; ++i) {
+      for (var j=0; j<COLS-2; ++j) {
+        if ((grid[i][j]=="1") && (grid[i][j+1]=="1") && (grid[i][j+2]=="1")) {
+          result = true;
+        }
+      }   
+    }
+    document.write("Horizontal line of three 1s: "+result);
+  
+    // Could add an if test, since no need to do this test if above test already returned true
+    // test for a vertical line of three 1s
+    var result = false;
+    for (var j=0; j<COLS; ++j) {
+      for (var i=0; i<ROWS-2; ++i) {
+        if ((grid[i][j]=="1") && (grid[i+1][j]=="1") && (grid[i+2][j]=="1")) {
+          result = true;
+        }
+      }   
+    }
+    document.write("<br>"+"Vertical line of three 1s: "+result);
+
+  </script>
+
+</body>
+</html>

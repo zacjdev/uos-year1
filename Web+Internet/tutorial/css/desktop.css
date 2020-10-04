@@ -1,0 +1,33 @@
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#jumptotop {
+  bottom: 10%;
+}
+
+#nav_main_wrapper {
+  flex-direction: row;
+}
+
+nav {
+  padding: 2em 2%;
+  text-align: left;
+}
+
+figure.right_desktop {
+  float: right;
+}
+
+figure.figsmall_desktop {
+  width: 50%;
+  max-width: 300px;
+}
+/*
+@media screen and (min-width: 1200px) {
+  main {
+    column-count: 2;
+  }
+}
+*/

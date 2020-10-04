@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter9">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    <h1>Chapter 9. Graphics and interaction on the canvas</h1>
+
+    <p>The aims of this chapter are to practise (i) drawing on the canvas; (iii) handling events related to the canvas;
+      (iii) creating animation on the canvas.</p>
+
+    <p>There are four sections in this chapter:</p>
+    <ol>
+      <li><a href="#9_1">Drawing on the canvas</a></li>
+      <li><a href="#9_2">Using buttons with a canvas</a></li>
+      <li><a href="#9_3">Mouse clicks on the canvas</a></li>
+      <li><a href="#9_4">Animation</a></li>
+    </ol>
+
+    <h2>9.1 Drawing on the canvas</h2>
+
+    <figure class="figextrasmall right">
+      <img src="images/ch9_three_images.png" alt="">
+      <figcaption><span>Figure 9.2:</span> Splitting an image into three parts</figcaption>
+    </figure>
+
+    <figure class="figextrasmall right">
+      <img src="images/ch9_cross_in_square.png" alt="">
+      <figcaption><span>Figure 9.1:</span> A cross in a square</figcaption>
+    </figure>
+
+    <p>Mozilla: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">canvas tutorial</a></p>
+
+    <p>(Hint: Use the programs from relevant lectures as the starting point for these exercises.)</p>
+
+    <h3>Exercises</h3>
+    <ol>
+      <li>Write a program to draw a cross in a square, as illustrated in Figure 9.1.
+        <span class="solution">[<a href="code\chapter9\solutions\exercise1_1.html">Solution</a>]</span></li>
+      <li>Find a free image (e.g. an image from the Internet). Write a program to display three subparts of the image in
+        a row on a canvas, as illustrated in Figure 9.2.
+        <span class="solution">[<a href="code\chapter9\solutions\exercise1_2.html">Solution</a>]</span></li>
+      <li>Find five free images and draw them all on a canvas.
+          <span class="solution">[<a href="code\chapter9\solutions\exercise1_3.html">Solution</a>]</span>
+      </li>
+    </ol>
+
+    <h2>9.2 Using buttons with a canvas</h2>
+
+    <h3>Exercises</h3>
+    <ol>
+      <li>Create a graphical user interface that contains four buttons and a canvas. The first button should draw a red
+        line between two random positions on the canvas when pressed. The second button should draw a green line between
+        two random positions on the canvas when pressed. The third button should draw a blue line between two random
+        positions on the canvas when pressed. The fourth button should clear the canvas. (Hint: use i_button1.html, available in the Appendix C download for this
+        chapter, as a starting point.)
+        <span class="solution">[<a href="code\chapter9\solutions\exercise2_1.html">Solution</a>]</span></li>
+      <li>Input some text from the user and draw this text on the canvas. The user should also be able to input the font
+        size of the text to display. (Hint: reuse some code from Chapter 8 to create some input areas for the user to
+        type information into.)
+        <span class="solution">[<a href="code\chapter9\solutions\exercise2_2.html">Solution</a>]</span></li>
+    </ol>
+
+    <h2>9.3 Mouse clicks on the canvas</h2>
+
+    <p>Mozilla: <a href="https://developer.mozilla.org/en/docs/Web/API/Element/mousedown_event">Mousedown event</a></p>
+
+    <figure class="figextrasmall right">
+      <img src="images/ch9_circle_in_grid_cell.png" alt="">
+      <figcaption><span>Figure 9.3:</span> Drawing a circle in the grid cell which the user has clicked on</figcaption>
+    </figure>
+
+    <h3>Exercises</h3>
+    <ol>
+      <li>Draw three non-overlapping circles on the canvas. Then use the mouse to detect which circle the user clicks inside and display
+        the result. (Hint: Use detect_in_rect1.html, available in the Appendix C download for this
+        chapter, as a starting point.)
+        <span class="solution">[<a href="code\chapter9\solutions\exercise3_1.html">Solution</a>]</span></li>
+      <li>Draw a 2D grid pattern (as shown in Figure 9.3). Draw a circle in the grid cell that the user clicks on. (Hint:
+        Use detect_in_grid1.html, available in the Appendix C download for this
+        chapter, as a starting point.)
+        <span class="solution">[<a href="code\chapter9\solutions\exercise3_2.html">Solution</a>]</span></li>
+    </ol>
+
+    <h2>9.4 Animation</h2>
+
+    <p>(Hint: use the animation examples from lectures as a starting point.)</p>
+
+    <h3>Exercises</h3>
+    <ol>
+      <li>Animate the text ‘Hello’ so that it continually moves around the screen. When the user clicks on the canvas, the text
+        should change to ‘Goodbye’. When the user clicks on the canvas again, the text should change to ‘Hello’, and so
+        on.
+        <span class="solution">[<a href="code\chapter9\solutions\exercise4_1.html">Solution</a>]</span></li>
+      <li>Draw a circle on the canvas. When the user clicks on the canvas, the circle should move to where the user has
+        clicked. The movement should be an animation from one point to the next rather than an instantaneous move from 
+        the previous point to the clicked point.
+        <span class="solution">[<a href="code\chapter9\solutions\exercise4_2.html">Solution</a>]</span></li>
+    </ol>
+
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

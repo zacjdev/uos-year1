@@ -1,0 +1,31 @@
+ul {
+   background-color: grey;
+   margin: 5px;
+   border: 5px solid blue;
+   padding: 15px 10px 25px 8px;
+ }
+ 
+ li {
+   background-color: rgb(150, 150, 255);
+   margin: 15px 25px;
+   border: 3px solid green;
+   padding: 5px 6px 7px 8px;
+ }
+
+ /*
+ body {
+   animation-duration: 3s;
+   animation-name: keep_rotating;
+   animation-iteration-count: infinite;
+ }
+
+ @keyframes keep_rotating {
+   from {
+     transform: rotate(0deg); 
+   }
+ 
+   to {
+     transform: rotate(360deg);
+   }
+ }
+ */

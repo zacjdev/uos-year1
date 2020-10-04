@@ -1,0 +1,61 @@
+body { 
+  min-width: 320px;
+  max-width: 1400px;
+  margin: 0;
+}
+
+#wrapper {
+  width: 100%;
+  background-color: rgb(235,245,255);
+}
+
+header {
+  padding: 0.5em 3%;
+  background-color: orange; 
+}
+
+header h1 {
+  margin: 0;  
+}
+
+nav {
+  padding: 0.5em 3%;
+  background-color: rgb(255,245,235);
+}
+
+nav ul {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding-right: 5%;
+}
+
+main {
+  padding: 0 3%;
+}
+
+main h1 {
+  font-size: 1.4em;
+}
+
+footer {
+  padding: 0.5em 3%;
+  background-color: rgb(245,255,235);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* media rules ~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (min-width: 500px) {
+  #wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

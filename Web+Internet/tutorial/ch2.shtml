@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter2">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div>
+      <a href="#" id="jumptotop">Jump to top</a>
+    </div>
+
+    <h1>Chapter 2. HTML and CSS basics</h1>
+
+    <p>This chapter covers the creation of basic one-page HTML files and their associated CSS files. These early examples will
+      help you to practise how to create, store and access HTML and CSS files without the complexity of dealing with long
+      complicated files or the many linked files needed for a complex website. We'll cover these extra complexities in later
+      chapters.</p>
+
+    <p>There are eight sections in this chapter:</p>
+    <ol>
+      <li>
+        <a href="#2_1">A HTML example</a>
+      </li>
+      <li>
+        <a href="#2_2">A CSS example</a>
+      </li>
+      <li>
+        <a href="#2_3">Lists</a>
+      </li>
+      <li>
+        <a href="#2_4">Boxes</a>
+      </li>
+      <li>
+        <a href="#2_5">CSS selectors</a>
+      </li>
+      <li>
+        <a href="#2_6">Images and figures</a>
+      </li>
+      <li>
+        <a href="#2_7">Tables</a>
+      </li>
+      <li>
+        <a href="#2_8">Reset and normalize</a>
+      </li>
+    </ol>
+
+    <h3>Resources</h3>
+
+    <p>Before you start, open a Web browser and download the zip file in Appendix C. Extract the contents from the zip file.
+      This will create multiple folders, including one called chapter2, which should contain the files
+      <code class="d">first.html</code>,
+      <code class="d">first.css</code> and
+      <code class="d">tpot1.jpg</code>, which are, respectively, a html file, a css file and an image in the .jpg format.</p>
+
+
+    <h2 id="2_1">2.1 A HTML example</h2>
+
+    <p>The file listed in Program Listing 2.1 is one of the files you downloaded,
+      <code class="d">first.html</code>.<p>
+        
+    <ol>
+      <li>Load the file into a code (text) editor, e.g. NotePad++ or Visual Studio Code</li>
+      <li>Open a Web browser (I tend to use Firefox and occasionally Chrome or Safari)</li>
+      <li>Load the file <code class="d">first.html</code> into the web browser. This can be done by dragging the filename from the file viewer window into the browser window. You can
+        also double-click on the filename and that will open whatever program is associated with the type of the
+        file based on its extension.
+        <br><em>Microsoft Windows:</em> Windows Explorer is the file viewer. Double-clicking on a file name will probably launch Microsoft Edge. as this is probably the default browser. I prefer Firefox. It is possible to change the default program associated with a type of file &ndash; in Windows, right click the filename
+        and select Open with... One extra thing to note in Windows is that the file extension (e.g. .html) may not be displayed by default. The extension can be displayed using the File View options in the Windows Explorer window. I personally find it useful to display the file extension.
+        <br><em>macOS:</em> Finder is the file viewer. Double-clicking on a file name will probably launch Safari. as this is probably the default browser. I prefer Firefox. You can change the program associated with html files in macOS by right-clicking on the filename.
+        </li>
+    </ol>
+
+    <p>It is also possible to open the same file in
+      <a href="https://codepen.io/hello">CodePen</a>, a webpage-based editor with real-time views of HTML, CSS and JavaScript. It is useful for trying out ideas.
+      Another alternative is
+      <a href="https://jsfiddle.net/">JSFiddle</a>. You might like to experiment with these.</p>
+
+    <figure class="programcode clearboth">
+      <pre class="line-numbers">
+<code class="language-html">&lt;!DOCTYPE html>
+&lt;html>
+
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>My first page&lt;/title>
+&lt;/head>
+
+&lt;body>
+  &lt;h1>My first heading&lt;/h1>
+  &lt;p>My first paragraph&lt;/p>
+
+  &lt;!-- This is a comment in a .html file -->
+&lt;/body>
+
+&lt;/html></code>
+</pre>
+      <figcaption>
+        <span>Program Listing 2.1:</span> first.html (
+        <a href="https://codepen.io/stevemaddock/pen/YozmVE">Open in CodePen</a> &ndash; result shown in Figure 2.1)</figcaption>
+    </figure>
+
+    <figure>
+      <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="stevemaddock" data-slug-hash="YozmVE"
+        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+        data-pen-title="first.html">
+        <span>See the Pen
+          <a href="https://codepen.io/stevemaddock/pen/YozmVE/">
+            first.html</a> by steve maddock (
+          <a href="https://codepen.io/stevemaddock">@stevemaddock</a>) on
+          <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+      <figcaption>
+        <span>Figure 2.1:</span> first.html, as viewed in CodePen</figcaption>
+    </figure>
+
+    <p>When you display this html file on a web page, the 'look' of the display is dictated by the web browser that you use.
+      Each html element is displayed in a default 'style', e.g. font used, size of font, spacing before and after a heading,
+      etc. For some less common elements, there can be minor differences between the defaults for different browsers, but for common elements
+      the displays in different browsers will look similar. (To display the source code of the file, right click on the webpage
+      and select 'view page source' or 'show page source', depending on browser.)</p>
+
+    <p>Style sheets can be used to change the default styles. The next section will look at this idea.</p>
+
+    <h2 id="2_2">2.2 A CSS example</h2>
+
+    <p> Program Listing 2.2 shows the contents of
+      <code class="d">first.css</code>. We'll use this to alter the display of
+      <code class="d">first.html</code>.</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">h1 {
+  color: teal;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 2em; /* twice the font-size of the parent element
+                     (In this case the body element is the parent.) */
+                  /* As you can see, CSS comments use different symbols to a .html file. */
+}
+
+p {
+  color: blue;
+}</code>
+</pre>
+      <figcaption>
+        <span>Program Listing 2.2:</span> An example stylesheet: first.css</figcaption>
+    </figure>
+
+    <p>Using a text editor, alter the contents of the head element in
+      <code class="d">first.html</code> to match what is listed in Program Listing 2.3. This "glues" the stylesheet
+      <code class="d">first.css</code> to the file
+      <code class="d">first.html</code>. When you load the file
+      <code class="d">first.html</code> into your Web browser, you should see the result in Figure 2.2.</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-html">&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>My first page&lt;/title>
+  &lt;!-- The following line is the code for a link -->
+  &lt;link rel="stylesheet" href="first.css">
+&lt;/head></code>
+</pre>
+      <figcaption>
+        <span>Program Listing 2.3:</span> HTML code to link to a stylesheet, which 'glues' the stylesheet to the html file</figcaption>
+    </figure>
+
+    <figure class="figsmall right">
+      <img src="images/ch2_first_nostyles.jpg" alt="">
+      <img src="images/ch2_first_withstyles.jpg" alt="">
+      <figcaption>
+        <span>Figure 2.2:</span> (top) Displaying first.html using Firefox's default stylesheet; (bottom) After using the stylesheet first.css.</figcaption>
+    </figure>
+
+    <p>
+      <strong>Important note about the cache:</strong> When you reload a html file into a browser window after changing the contents of the attached
+      CSS file, you may not see any change to the display. This is because browsers sometimes make use of their 'cache',
+      a temporary store for recently-used files. If the display does not look like you expect after making some changes,
+      you can force the browser to not use the cache by using 'Ctrl+Shift+R' on Windows and 'Command+Shift+R' on Macs to
+      reload the current webpage. (In Firefox, you can see the state of the cache by typing 'about:cache' into the Address
+      Bar.) </p>
+
+    <h3>Exercises</h3>
+
+    <p>The first two exercises involve making simple changes to
+      <code class="d">first.html</code> and
+      <code class="d">first.css</code>. There are no supplied solutions to these exercises as you are just changing lines in existing files and the results should be obvious.</p>
+
+    <ol>
+      <li>Web browsers support a range of
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">named colours
+        </a> (such as red, green and blue), but any colour can be set using rgb(red,green,blue), where the red, green and
+        blue components each range from 0 to 255. For example, rgb(0,0,0) is black, rgb(255,0,0) is red, rgb(255, 255,255)
+        is white, and rgb(15, 142, 208) is a little red, a bit more green and a lot of blue, giving some shade of greeny-blue. It is also possible to use rgba(red,green,blue,alpha)
+        for the colour, where a is the alpha channel in the range 0 (fully transparent) to 1.0 (fully opaque).
+        <br> In
+        <code class="d">first.css</code>, change the colour of the h1 element to rgb(200, 34, 34) instead of teal and then reload
+        <code class="d">first.html</code>. Now try some other colours.</li>
+      <li>In
+        <code class="d">first.css</code>, the font-size property is set to 2em. This measurement unit is a relative unit. 2em means 2 times the font size
+        of the parent element, which in this case is the body element, which has not been explicitly set by any rule and
+        so assumes the default font size (which is typically size 16 font in browsers, although this may be overridden using
+        user preferences in the browser options menu). Change the font-size from 2em to a different measurement, e.g. 24px,
+        which is an absolute measurement meaning 24 pixels in height.
+      </li>
+    </ol>
+
+    <p>There are lots of
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">different HTML elements
+      </a>. The next few sections will look at some of the more commonly used ones. Mozilla have a
+      <a href="https://websitesetup.org/html5-cheat-sheet/">one-page sheet</a> that lists many of them.
+    </p>
+
+    <h2 id="2_3">2.3 Lists</h2>
+
+    <p>Lists come in useful for a number of things in HTML. Their basic use is to create a bulleted list of items or a range
+      of different numbered lists. However, they are also useful when creating navigation areas on a web page, as we shall
+      see in later chapters. For now, we'll just get used to the syntax of creating a simple bulleted list.</p>
+
+    <p>Program Listing 2.4 shows the html for an unordered (bulleted) list of three items. The &lt;ul> tag starts the list and
+      the &lt;/ul> tag ends it. Three
+      <strong>l</strong>ist
+      <strong>i</strong>tems are enclosed. Note that most html elements have a start and end tag &ndash; it is important that you remember to include these. Later, we'll meet some elements, sometimes called empty elements, that only have a start tag.</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-html">&lt;ul>
+  &lt;li>one&lt;/li>
+  &lt;li>two&lt;/li>
+  &lt;li>three&lt;/li>
+&lt;/ul></code>
+</pre>
+      <figcaption>
+        <span>Program Listing 2.4:</span> A bulleted list of three items</figcaption>
+    </figure>
+
+    <p>Two spaces of indentation is used in Program Listing 2.4. Some people prefer four spaces. You will find that most editors
+      (such as Notepad++ or Visual Studio Code) will have a default style for indentation. Whichever approach you use, you
+      must be consistent. (Note: Always use spaces for indentation instead of tabs &ndash; most editors have options to make
+      this happen. If you use tabs, printing your code on a printer may produce strangely indented results, since there may
+      be a mixture of tabs and spaces for indents in the file.)
+    </p>
+
+    <p>There are some examples of lists at
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">Mozilla's site
+      </a> that you may wish to take a look at before proceeding to the exercises.</p>
+
+    <h3>Exercises</h3>
+
+    <p>(<strong>Strong Hint:</strong> Rather than type all the HTML and CSS, cut and paste the code from previous examples and then change the necessary
+      parts. This will save you a lot of typing. Also, there should be no typos in the code you have already tested.)</p>
+
+    <ol>
+      <li>
+        <p>Write the HTML to display an unordered list of 5 items. Each list item should be a link to the website for a different
+          Web browser, e.g. Chrome, Firefox, Microsoft Edge, Opera, Safari. Thus, when the user clicks on a list item, they
+          are taken to the page describing the relevant Web browser, e.g. a single list item would be:</p>
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-html">&lt;li>&lt;a href="https://www.mozilla.org/en-GB/firefox/">Firefox&lt;/a>&lt;/li></code>
+</pre>
+        </figure>
+
+        <p>This example includes a hyperlink using the anchor element. An absolute URL is used for the hyperlink as it is linking
+          to an external website. In later examples we'll see that relative links are typically used for links to pages on
+          the same website.</p>
+
+        <p>An alternative way to lay this out is:</p>
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-html">&lt;li>
+  &lt;a href="https://www.mozilla.org/en-GB/firefox/">Firefox&lt;/a>
+&lt;/li></code>
+</pre>
+        </figure>
+
+        <p class="solution">[Solution:
+            <a href="code/chapter2/solutions/listof5.txt">source text)</a>,
+            <a href="code/chapter2/solutions/listof5.html">html</a>]
+        </p>
+
+        <p>I have given links to both the source text and the html file. In future I will just link to the html. To view the
+          source text, open the html file, then right click on the displayed webpage and select 'view page source' or 'show
+          page source' (depending on browser). Alternatively, you can open the html file in a text editor &ndash; all the
+          solutions are in the download in Appendix C.</p>
+      </li>
+    </ol>
+
+    <h2 id="2.4">2.4 Boxes</h2>
+
+    <figure class="figsmall right">
+      <img src="images/ch2_boxmodel.png" alt="box model">
+      <figcaption>
+        <span>Figure 2.3:</span> The box model</figcaption>
+    </figure>
+
+    <p>Every element (e.g. h1, p, ul, li and other elements) on a webpage is a box (Figure 2.3). Thus, when you are adding elements to a
+      page, you are actually arranging boxes. CSS provides lots of properties to arrange and style these boxes. Before we
+      move on to some new elements, read Mozilla's information on the
+      "<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">box model</a>".</p>
+
+    <h3>Exercises</h3>
+
+    <ol>
+      <li>Create a CSS file, add the following code and then attach ("glue") it to your list example:
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">ul {
+  background-color: grey;
+  margin: 5px;
+  border: 5px solid blue;
+  padding: 15px 10px 25px 8px;
+}
+
+li {
+  background-color: rgb(150, 150, 255);
+  margin: 15px 25px;
+  border: 3px solid green;
+  padding: 5px 6px 7px 8px;
+}</code>
+</pre>
+        </figure>
+
+        <p>This shows the boxes that make up each element. By adding a background-color to each element, we can see the extent
+          of the boxes. Figure 2.3 illustrates the properties of a box element. The background-colour only applies to the
+          content and the padding, not the margin area.</p>
+        <p>One thing you should be aware of is that margins between vertically-abutting boxes are
+          automatically collapsed by browsers: "The top and bottom margins of blocks are sometimes combined (collapsed)
+          into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal),
+          a behavior known as margin collapsing"
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">[Mozilla: margin collapsing]</a>.</p>
+
+        <p>Note: Using a background-color on an element can help with debugging what is happening when boxes are laid out.</p>
+      </li>
+    </ol>
+
+    <h2 id="2_5">2.5 CSS selectors</h2>
+
+    <p>There are many ways to style particular elements in a HTML file using different
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors">selectors, classes and ids</a>. 
+      Program Listing 2.5 shows an example of a class selector: a dot followed by a class name invented
+      by the user.</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">.highlight {
+  color: blue;
+  font-style: italic;
+  padding: 0px 5px 0px 5px;
+}</code>
+</pre>
+      <figcaption>
+        <span>Program Listing 2.5:</span> A class selector</figcaption>
+    </figure>
+    </p>
+
+    <p>
+      This can be used to style multiple elements on a webpage that are labelled with that class name. In the following, the middle two paragraphs would not be highlighted:
+      <pre>
+<code class="language-html">&lt;p class="highlight">some text&lt;/p>
+&lt;p>some text&lt;/p>
+&lt;p>some text&lt;/p>
+&lt;p class="highlight">some text&lt;/p></code></pre> 
+    </p>
+
+    <p>
+      Program Listing 2.6 shows an example of an id selector: a hash followed by a unique id name to be targetted in the html file.
+    </p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">#specific {
+  color: rgb(100,200,255);
+}</code>
+</pre>
+      <figcaption>
+        <span>Program Listing 2.6:</span> An id selector</figcaption>
+    </figure>
+
+    <p>
+      This can be used to style a single element on a webpage that is labelled with that id name. The id name cannot be used for any other element on the web page. In the following, the second paragraph would be targetted by the CSS rule:
+      <pre>
+  <code class="language-html">&lt;p class="highlight">some text&lt;/p>
+  &lt;p id="specific">some text&lt;/p>
+  &lt;p>some text&lt;/p>
+  &lt;p class="highlight">some text&lt;/p></code></pre>
+    </p>
+
+    <p>Combinations of rules can also be used. Read through
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors">Mozilla's guide
+      </a> before continuing with these exercises.</p>
+
+    <p>When a CSS file contains lots of rules, it becomes more complicated to work out which rules apply to which elements.
+      Read
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">inheritance, cascading and specificity</a> to help understand how this is done.</p>
+
+    <p>The following exercises will explore these ideas.</p>
+
+    <h3>Exercises</h3>
+
+    <ol>
+      <li>Create a HTML file to display a heading element using the h1 tag (using some random text for the heading), followed by
+        three short paragraphs of random text.</li>
+      <li>Create a CSS file (and 'glue' it to your html file from the previous exercise) such that the h1 element is displayed
+        in blue on an orange background.
+        <br> (Hint: you will need to use the property
+        <code class="language-CSS">background-color: orange</code> in the rule for h1 in the CSS file.)
+      </li>
+      <li>
+        Add three class rules to the CSS file:
+        <ol type="a">
+          <li>A class rule called ‘highlight’ that, for elements it is applied to, changes the text color to blue, the font-style
+            to italic and adds some padding to the left and right. (Hint: see Program Listing 2.5.)</li>
+          <li>A class rule called ‘redgrey’ that changes the background-color of an element to a pale grey and the text color
+            to red; (Hint: use rgb() to create a pale grey.)
+          </li>
+          <li>A class rule called ‘largegreenfont’ that changes the font-family to Calibri with a font-size of 3em and a text
+            color of green.
+          </li>
+        </ol>
+        <li>Using the three class rules you have just created, change the appearance of the paragraphs on your web page by adding
+          a single class to each paragraph.
+        </li>
+        <li>Add more than one class name to each paragraph to investigate what happens depending on the order of the class names,
+          e.g.
+          <figure class="programcode clearboth">
+            <pre>
+<code class="language-html">&lt;p class="highlight redgrey">text text text&lt;/p>
+&lt;p class="redgrey highlight">text text text&lt;/p>
+&lt;p class="redgrey highlight largegreenfont">text text text&lt;/p></code>
+</pre>
+          </figure>
+          Does it make a difference, or is it the order of rules in the CSS file that makes the difference?
+          <sup>1</sup>
+          Try changing the order of the rules in the CSS file.
+          <br>
+          <sup>1</sup> It is the ordering of rules in the CSS file that is important, not the order of names listed in the class
+          attribute.
+        </li>
+        <li>
+          Add a span element to one of the words in one of the paragraphs and then style the word contained in the span element differently
+          to the surrounding text. You will need to add an extra rule to the CSS file. (Look up how to use the span element
+          at
+          <a href="https://developer.mozilla.org/en-US/docs/Learn">https://developer.mozilla.org/en-US/docs/Learn</a>
+          &ndash; use the search box to find help on ‘span’).
+        </li>
+    </ol>
+
+    <p class="solution">[Solution for all the above exercises:
+      <a href="code/chapter2/solutions/class_example.html">class_example.html</a>,
+      <a href="code/chapter2/solutions/class_example.css">class_example.css</a>]</p>
+
+    <h2 id="2_6">2.6 Images and figures</h2>
+
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images</a>
+      (photographs, diagrams, etc) can be added to a web page using the img tag:</p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-html">&lt;img src="tpot1.jpg" alt="a teapot" width="300"></code>
+</pre>
+    </figure>
+
+    <p>img is an 'empty element', so it does not have a closing tag. The alt attribute is usually set to a brief textual description
+      of the image, as this is required for
+      <a href="https://www.w3.org/TR/WCAG20-TECHS/H37.html">accessibility</a>. However, it can be set to the empty string ("") when the image serves purely decorative purposes. Both the width and height
+      can be set for the image to specify its display size (which may not be the same as its real resolution). If only the
+      width is set, the height is automatically calculated to preserve the original aspect ratio of the image. Both the width
+      and height attributes can be omitted and CSS can be used to control the size.
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Other attributes</a> can also be set for an img element.</p>
+
+    <p>img is an
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">inline element</a>, which means it will not force a new line before or after it is displayed. (Note: the separation
+      of elements into inline or block elements has been superceded by a more
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">comprehensive classification</a>. However, inline and block still serve as a useful distinction of behaviour.) The
+      following shows the img element added within a block level element (a paragraph), where ... would be replaced accordingly:</p>
+    <pre>
+<code class="language-html">&lt;p>text text text &lt;img src=... alt=...>text text text&lt;/p></code>
+</pre>
+
+    <p>The width of the browser window may create different display results, depending on whether or not the whole image fits
+      on the remainder of a line or needs to be moved to the next line of the display.</p>
+
+    <p>Because img is an inline element, it can cause problems when styling it with CSS. The following information from Mozilla
+      should be considered when styling imgs:
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Styling_with_CSS">Styling with CSS</a>. This suggests that one way to make images easier to control is to promote them to a block-level
+      element by changing their display property using CSS. An alternative is to wrap them in a figure element, which is
+      a block-level element. Even in this case, the fact that the img is an inline element still needs careful consideration
+      in order to get correct display results.</p>
+
+    <p>The following exercises explore these ideas.</p>
+
+    <h3>Exercises</h3>
+
+    <p>Reuse a html file from a previous exercise as the starting point for these exercises.</p>
+
+    <ol>
+      <li>
+        <figure class="figsmall right">
+          <img src="images/ch2_image_paragraph.jpg" alt="">
+          <figcaption>
+            <span>Figure 2.4:</span> img element within a paragraph element</figcaption>
+        </figure>
+        <p>Add an image to a html file within a paragraph element (Figure 2.4). Then vary the size of the browser window to
+          see what effect it has on the display of the elements.</p>
+        <p class="solution">
+          [<a href="code/chapter2/solutions/img1.html">Solution</a>]
+        </p>
+      </li>
+      <li>
+        <figure class="figsmall right clearboth">
+          <img src="images/ch2_figure_paragraphs.jpg" alt="">
+          <figcaption>
+            <span>Figure 2.5:</span> figure element between paragraph elements</figcaption>
+        </figure>
+        <p>Remove the image tag from the paragraph in the previous exercise. Now, use the figure element to add an image inbetween
+          two paragraphs (Figure 2.5). Then display the web page in your browser. Since the figure element is a block element,
+          you should see that it is automatically displayed on a new line in a file irrespective of the width of the browser
+          window.
+          <span class="solution">[<a href="code/chapter2/solutions/figure1.html">Solution</a>,
+            <a href="code/chapter2/solutions/figure1_discussion.txt">Discussion</a>]</span>
+        </p>
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-html">&lt;p>text text text&lt;/p>
+
+&lt;figure>
+  &lt;img src="tpot1.jpg" alt="a teapot" width="300">
+  &lt;figcaption>A teapot&lt;/figcaption>
+&lt;/figure>
+
+&lt;p>text text text&lt;/p></code>
+</pre>
+        </figure>
+      </li>
+      <li>
+        Try downloading an image off the Internet and displaying it instead of the teapot. For example, 
+        you could use an image from <a href="https://www.flickr.com/creativecommons/">https://www.flickr.com/creativecommons/</a>.
+        (Note: You MUST always make sure you have permission to use someone else's image, as images are subject to copyright.)</li>
+      <li>One thing you may wish to do with figures is to have text flow around them. This can be done using the float property
+        in a CSS rule. Add the following two rules to your CSS file:
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">figure {
+  float: left;
+  border: solid 1px gray;
+  margin: 5px 5px 5px 0;
+  padding: 0;
+  background-color: white;
+}
+
+figcaption {
+  text-align: center;
+}</code>
+</pre>
+        </figure>
+
+        <p>This will float the figure to the left hand side of the parent element (as illustrated in Figure 2.6). Other things,
+          e.g. text, then flow around it. Take a look at the relevant entry for float at:
+          <a href="https://developer.mozilla.org/en-US/docs/Learn">https://developer.mozilla.org/en-US/docs/Learn</a>
+          (you'll need to search for 'float' from the landing page).</p>
+
+        <figure class="figsmall right">
+          <img src="images/ch2_figure_paragraphs_float.jpg" alt="">
+          <figcaption>
+            <span>Figure 2.6:</span> Floating the figure to the left</figcaption>
+        </figure>
+
+        <p>The border of the figure is also set to a 1px wide grey (US: gray) line. A shorthand version of margin is used to
+          set a margin of 5px on the top, right and bottom of the figure and 0 on the left. (The shorthand version of margin
+          gives the values in clockwise order starting from the 12 o'clock position.) See Mozilla's information on
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Box_properties">box properties
+          </a> for more information on borders and margins.</p>
+        <p>Vary the size of the browser window to see what effect it has on the display of the elements.</p>
+          <p>Note: Since it is a floated element it is not part of the
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">normal flow</a>, thus it effectively appears on top of the other elements,
+          even if the text flows around it. Typically,
+          this effect is not seen because the individual heading and paragraph elements do not have a background-color set.
+          Instead the containing element for them all, e.g. the body, has its background-color set. Try setting the background-color
+          of different elements on the page to different colours using different CSS rules to see how float works.</p>
+        <p>For more information on float, see
+          <a href="https://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/">Smashing Magazine: float
+          </a>.</p>
+        <p>In the early days of web design, float was used to create complex layouts on web pages. Nowadays,
+          <code class="d">display: flex</code> and
+          <code class="d">display: grid</code> offer more control and are typically used instead &ndash; we'll see more of these in later chapters. However,
+          float still has some uses, e.g. for floating images to one side of a container.</p>
+      </li>
+    </ol>
+
+    <h2 id="2_7">2.7 Tables</h2>
+
+    <figure class="right figsmall">
+      <img src="images/ch2_table1.png" alt="a table">
+      <figcaption>
+        <span>Figure 2.7:</span> A table.</figcaption>
+    </figure>
+
+    <p>Tables have obvious uses for displaying data in a structured way. In the early days of the WWW, they were also used (in
+      creative ways) to format the display of multiple elements on a web page. Thankfully, this has now been superceded by
+      the use of
+      <code class="d">display: flex</code> and
+      <code class="d">display: grid</code> for layout, which we'll look at in a later chapter. </p>
+
+    <ol>
+      <li>Create a Web page that will produce the table displayed in Figure 2.7. (Hint: see
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics">Mozilla's resource on tables</a>.)
+        <span class="solution">[<a href="code/chapter2/solutions/table1.html">Solution</a>]</span>
+      </li>
+    </ol>
+
+    <br class="clearboth">
+
+    <h2 id="2_8">2.8 Reset and Normalize</h2>
+
+    <p>All browsers have a set of default styles they use to display a web page. They are very similar. Three open source ones
+      are:</p>
+    <ul>
+      <li>
+        <a href="https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css">Chromium</a> - Chrome and Opera</li>
+      <li>
+        <a href="https://dxr.mozilla.org/mozilla-central/source/layout/style/res/html.css">Mozilla</a> - Firefox</li>
+      <li>
+        <a href="https://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css">WebKit</a> - Safari</li>
+    </ul>
+
+    <p>However, whilst the results these style sheets produce are similar, for some elements they are not. Thus, CSS resets
+      were born. These reset all the styles to some standardised base before the user then adds their own custom styles.
+      A minimal reset would be:
+      <code class="language-css">* { margin: 0; }</code> which would reset margins for every element to 0. The
+      <code class="language-css">*</code> is a wildcard that matches every HTML element. Of course there are more sophisticated resets. A popular one is
+      <a
+        href="http://meyerweb.com/eric/tools/css/reset/">http://meyerweb.com/eric/tools/css/reset/</a>. For more on CSS resets, consult the following article:
+      <a href="https://bitsofco.de/a-look-at-css-resets-in-2018/">https://bitsofco.de/a-look-at-css-resets-in-2018/</a>.
+    </p>
+
+    <p>An alternative to resetting all the styles is to normalize them all. This is similar, but the standardised base is set
+      to something that someone else deems 'normal'. The user again adds their own custom styles. A popular normalize stylesheet
+      is:
+      <a href="http://nicolasgallagher.com/about-normalize-css/">http://nicolasgallagher.com/about-normalize-css/</a>.
+    </p>
+
+    <h3>Exercises</h3>
+
+    <p>There are no supplied solutions for these exercises as it is just altering the stylesheets used in the display of the
+      webpage.</p>
+
+    <p>Start with your solution to any one of the above exercises. It doesn’t matter which one. The purpose is to experiment
+      with reset and normalize. There is no right or wrong solution.</p>
+
+    <ol>
+      <li>In the head section of your html file, include a CSS reset, such as
+        <a href="http://meyerweb.com/eric/tools/css/reset/">Meyer's</a>. You will need to download the reset file, save it in the same folder as your html file and include it
+        in the head of your html file as follows, where reset_filename.css is whatever you called the file when you downloaded
+        it:
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-html">&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>The title&lt;/title>
+  &lt;link rel="stylesheet" href="reset_filename.css">
+  &lt;link rel="stylesheet" href="your_file.css">
+&lt;/head></code>
+</pre>
+        </figure>
+
+        The included reset_filename.css file will change the default display of the browser. In your css file, your_file.css, experiment
+        with adding some padding and margin to the h1 and p elements, so that you 'override' what has been set in reset_filename.css.
+        Your definitions are given after the ones in the reset file, so your definitions will override the ones in the CSS
+        file for the properties you have changed in a specific rule.
+      </li>
+      <li>In the head section of your html file, replace the reset stylesheet with
+        <a href="http://nicolasgallagher.com/about-normalize-css/">Gallagher's normalize</a> stylesheet. Again, experiment with altering the padding and margin of your h1 and p elements.</li>
+    </ol>
+
+    <p>It is your choice as to whether or not you use a reset or a normalize in your html files. You may also decide not to
+      use either and instead define your own minimal reset.</p>
+
+   
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

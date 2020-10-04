@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter7">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    <h1>Chapter 7. JavaScript: Functions, Built-in objects, Arrays</h1>
+
+    <p>The aim of this chapter is to practise JavaScript programming using more features of the language. You can use <code class="language-javascript">document.write()</code> in your answers to the following
+      exercises. You might also consider experimenting with console.log().</p>
+      
+    <p>If you are feeling adventurous, you might also like to experiment with using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">getElementById</a> (or the more flexible <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a>), <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">textContent</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a>, which will be covered in lectures. (Beware the security concerns regarding innerHTML though &ndash; we'll discuss these in lectures.)</p>
+
+      <p>There are three sections in this chapter:</p>
+      <ol>
+        <li><a href="#7_1">Functions</a></li>
+        <li><a href="#7_2">Built-in objects</a></li>
+        <li><a href="#7_3">Arrays</a></li>
+      </ol>
+
+
+    <h2>7.1 Functions</h2>
+
+    <p>Mozilla: <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Functions">functions</a></p>
+
+    <h3>Exercises</h3>
+
+    <ol>
+      <li>Write a JavaScript program that reads a number input by a user and then uses a function to display the string
+        'Hello' that
+        number of times, e.g. if the user inputs 5, then 'Hello' will be displayed 5 times. 
+        <span class="solution">[<a href="code\chapter7\solutions\exercise1_1.html">Solution</a>]</span>
+      </li>
+      <li>Write a program that uses functions to calculate the area and circumference of a circle, given a particular
+        radius.
+        <span class="solution">[<a href="code\chapter7\solutions\exercise1_2.html">Solution</a>]</span></li>
+      <li>Write a JavaScript program that reads three numbers: an initial sum of money, a desired sum of money and an
+        annual rate of interest (expressed as a percentage). Your program should use a <code>while</code> loop to
+        determine how many years it will take the investment to grow from the initial sum into the desired sum. A
+        function should be used to (i) get a sum of money (with the message supplied as a parameter) – this can be used
+        to read the initial sum of money and then used again to read the desired sum of money, and (ii) calculate a new
+        amount of money when interest is applied – this second function will be called for each iteration of the while
+        loop.
+        <span class="solution">[<a href="code\chapter7\solutions\exercise1_3.html">Solution</a>]</span></li>
+    </ol>
+
+    <h2>7.2 Built-in objects</h2>
+
+    <p>Mozilla: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#Numbers_and_dates">Standard built-in objects</a></p>
+
+    <h3>Exercises</h3>
+
+    <ol>
+      <li>Write a JavaScript program that displays the current date, but without any time data, e.g. Friday, 4 October
+        2019. For this program, you will need to use the <a
+          href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> object.
+        Create a new Date using the new keyword and then use some of
+        the Date methods to retrieve the required information. Note that the date.getDay() method returns a number, so
+        you will have to write some code to convert the number
+        into the particular day that you wish to display, possibly even writing a function to do this.
+        <span class="solution">[<a href="code\chapter7\solutions\exercise2_1.html">Solution</a>]</span></li>
+    </ol>
+
+    <h2>7.3 Arrays</h2>
+
+    <p>Mozilla: <a href="https://developer.mozilla.org/en/docs/Learn/JavaScript/First_steps/Arrays">arrays</a></p>
+
+    <h3>Exercises</h3>
+
+    <ol><li>Write a program that creates an array containing 10 random numbers in the range 0 to 20. (Hint: use <a
+          href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a>.)
+        The array should then
+        be displayed. Then, the index position of each number greater than 10 should be displayed.
+        <span class="solution">[<a href="code\chapter7\solutions\exercise3_1.html">Solution</a>]</span></li>
+      <li>Write a program that stores 10 random floating point numbers in the range
+        0.0&nbsp;&lt;=&nbsp;number&nbsp;&lt;&nbsp;10.0 in an
+        array. Then, for each number in the array, display the results of using Math.floor(), Math.round() and
+        Math.ceil(). As an example, if the number stored in the array a at index 3 was 4.2, then Math.floor(a[3]) would
+        display 4, Math.round(a[3]) would display 4, and Math.ceil(a[3]) would display 5.
+        <span class="solution">[<a href="code\chapter7\solutions\exercise3_2.html">Solution</a>]</span></li>
+      <li>
+        <table class="noborder right">
+          <caption><span>Figure 7.1:</span> Displaying a row of stars to match the integer part of a floating point numnber</caption>
+          <tr>
+            <td>4.6</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>4:</td>
+            <td>****</td>
+          </tr>
+          <tr>
+            <td>7.7</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>7:</td>
+            <td>*******</td>
+          </tr>
+          <tr>
+            <td>5.6</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>5:</td>
+            <td>*****</td>
+          </tr>
+          <tr>
+            <td>1.5</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>1:</td>
+            <td>*</td>
+          </tr>
+          <tr>
+            <td>2.2</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>2:</td>
+            <td>**</td>
+          </tr>
+          <tr>
+            <td>2.4</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>2:</td>
+            <td>**</td>
+          </tr>
+          <tr>
+            <td>3.1</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>3:</td>
+            <td>***</td>
+          </tr>
+          <tr>
+            <td>0.2</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>0:</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9.8</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>9:</td>
+            <td>*********</td>
+          </tr>
+        </table>
+        Write a program that stores 10 random floating point numbers in the range
+        0.0&nbsp;&lt;=&nbsp;number&nbsp;&lt;&nbsp;10.0 in an array
+        and then produces a display such as that shown in Figure 7.1, where the number of stars displayed matches the
+        integer part of the number.
+        <span class="solution">[<a href="code\chapter7\solutions\exercise3_3.html">Solution</a>]</span>
+      </li>
+      <li class="clearboth">
+        <div class="right">
+          <table class="right">
+            <caption><span>Figure 7.3:</span> Counting the number of ones in each row of Figure 7.2</caption>
+            <tr>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>3</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>0</td>
+              <td>3</td>
+              <td>3</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>2</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+          </table>
+          <table class="right">
+            <caption><span>Figure 7.2:</span> A 2D array of random numbers</caption>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+          </table>
+        </div>
+        <ol type="a">
+          <li>Write a program that randomly stores either a 1 or a 0 in each index location of a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Creating_a_two-dimensional_array"> 2D array</a> (an array of arrays) of dimensions
+            5x5, as illustrated in Figure 7.2.
+            <span class="solution">[</span>see next exercise<span class="solution">]</span></li>
+          <li>Write a program to count the total number of 1s and 0s in the 2D array.
+            <span class="solution">[<a href="code\chapter7\solutions\exercise3_4b.html">Solution</a>]</span>
+          </li>
+          <li>Write a program that chooses four random locations in the array and adds 2 to the numbers stored in those
+            locations; The same random location can be chosen multiple times.
+            <span class="solution">[<a href="code\chapter7\solutions\exercise3_4c.html">Solution</a>]</span></li>
+          <li>Write a program to replace every 1 in the
+            2D array with a count of the number of 1s in the same row; the result for Figure 7.2 is shown in Figure 7.3.
+            <span class="solution">[<a href="code\chapter7\solutions\exercise3_4d.html">Solution</a>]</span>
+          </li>
+          <li>Write a program that checks to see if three adjoining horizontal or vertical index locations have a 1
+            stored in
+            them. Thus for the grid in Figure 7.2, the result would be true. It doesn’t matter how many times it is true.
+            <span class="solution">[<a href="code\chapter7\solutions\exercise3_4e.html">Solution</a>]</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>

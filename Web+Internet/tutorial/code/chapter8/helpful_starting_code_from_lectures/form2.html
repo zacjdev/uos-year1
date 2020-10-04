@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <form name="myform" action="http://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+
+    <!-- the following line must be included as it is required by the cgi script -->
+    <!-- ****************** 
+            Replace your_email_address below with the relevant part of your sheffield email address.
+            It must be your sheffield email address.
+         ******************
+      -->
+    <input type="hidden" name="recipient" value="replace_this@sheffield.ac.uk">
+
+    <!-- full details at: http://www.scriptarchive.com/formmail.html -->
+    <input type="hidden" name="subject" value="Test Form" />
+
+    <p>
+      <label for="from">Your name:</label>
+      <input type="text" name="from" id="from"
+             maxlength="40" size="20" placeholder="type your name..."  required>
+    </p>
+
+    <p>
+      <label for="email">Your e-mail:</label>
+      <input type="email" name="email" id="email" placeholder="type your email..."
+             maxlength="40" size="20" required>
+    </p>
+
+    <!-- must have one button of type 'submit' in order to send the form to the cgi script -->
+    <p>
+      <input type="submit" name="submit" id="submit" value="Submit">
+      <input type="reset">
+    </p>
+
+</form>
+
+</body>
+</html>

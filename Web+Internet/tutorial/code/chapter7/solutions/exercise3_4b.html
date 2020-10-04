@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+  <meta name="author" content="Steve Maddock">
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+
+    const ROWS = 5;
+    const COLS = 5;
+  
+    var grid = []; //new Array(ROWS);
+    var number;
+     
+    for (var i=0; i<ROWS; ++i) {
+      grid[i] = new Array(COLS); // or grid.push([]);
+    }
+  
+    for (var i=0; i<ROWS; ++i) {
+      for (var j=0; j<COLS; ++j) {
+        number = (Math.random()<0.5) ? 0 : 1;
+        //console.log('<p>'+number+'</p>'); // testing
+        grid[i][j] = number;  // or grid[i].push(number);
+      }
+    }
+
+    // document.write('<p>'+grid+'</p>');
+    for (var i=0; i<ROWS; ++i) {
+      for (var j=0; j<COLS; ++j) {
+        document.write(grid[i][j]+"&nbsp;&nbsp;&nbsp;");
+      }
+      document.write("<br>");
+    }
+  
+    // count 0s and 1s
+    var num0s = 0;  // set counts to zero
+    var num1s = 0;
+    for (var i=0; i<ROWS; ++i) {
+      for (var j=0; j<COLS; ++j) {
+        if (grid[i][j]==0) {
+          num0s++;
+        }
+        else {
+          num1s++;
+        }
+      }
+    }
+  
+    document.write("<p>Number of 0s: "+num0s+"</p>");
+    document.write("<p>Number of 1s: "+num1s+"</p>");
+
+  </script>
+
+</body>
+</html>

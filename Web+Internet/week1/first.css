@@ -1,0 +1,74 @@
+* { /*Universal reset*/
+  margin: 0;
+  padding: 0;
+}
+
+* { /*Universal reset*/
+  margin: 2px;
+  padding: 2px;
+}
+
+ul {
+  background-color: grey;
+  margin: 5px;
+  border: 5px solid blue;
+  padding: 15px 10px 25px 8px;
+}
+
+li {
+  background-color: rgb(150, 150, 255);
+  margin: 15px 25px;
+  border: 3px solid green;
+  padding: 5px 6px 7px 8px;
+}
+
+.gamer {
+    color:blue;
+    font-size: 100px;
+    border: 10px solid purple;
+}
+
+#target {
+  background-color: orange;
+  color: blue;
+}
+
+.highlight {
+  color: blue;
+  font-style: italic;
+  padding: 5px;
+}
+
+.redgrey {
+  background-color: rgb(4,4,4);
+  color: red;
+}
+
+.largegreenfont {
+  font-family: calibri;
+  font-size: 3em;
+  color: green;
+}
+
+figure {
+  float: left;
+  border: solid 1px gray;
+  margin: 5px 5px 5px 0;
+  padding: 0;
+  background-color: white;
+}
+
+figcaption {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}

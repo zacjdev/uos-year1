@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter4">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    <h1>Chapter 4. More CSS for Responsive Web Design</h1>
+
+    <p>This chapter will cover the CSS required for creating a website using Responsive Web Design (RWD). As in previous
+      chapters, you can refer to Mozilla's site or other sites for help with understanding specific
+      features.
+      Remember that there are no right or wrong solutions to the exercises that you are doing. There are plenty of
+      alternative good solutions.</p>
+
+    <p>There are seven sections in this chapter:</p>
+    <ol>
+      <li><a href="#4_1">Beginnings</a></li>
+      <li><a href="#4_2">Media queries</a></li>
+      <li><a href="#4_3">Flexbox</a></li>
+      <li><a href="#4_4">Resizing images</a></li>
+      <li><a href="#4_5">Responsive navs</a></li>
+      <li><a href="#4_6">Grid</a></li>
+      <li><a href="#4_7">Further reading</a></li>
+    </ol>
+
+    <h2 id="4_1">4.1 Beginnings</h2>
+
+    <figure class="right figsmall">
+      <img src="images/ch4_start.png" alt="a website">
+      <figcaption><span>Figure 4.1:</span> A website with three main areas.</figcaption>
+    </figure>
+
+    <p>The starting point for the initial experiments is a Web page that has three areas: a header, a
+      main content area and a footer. (We'll add a navigation area later.) The outline display of this page is shown in
+      Figure 4.1. The following exercises
+      ask you to create the relevant html and css. We'll omit the navigation area for now, and return to it in a short
+      while.</p>
+
+    <h3>Exercises</h3>
+    <ol>
+      <li>Create a html file with three areas: a header, a main and a footer. Program Listing 4.1 gives the outline.
+      </li>
+      <li>Add some text to the main area of the web page, e.g. a heading
+        and some paragraphs of text.</li>
+      <li>Add a main heading for the page inside the header area. Use the h1 tag for this.</li>
+      <li>Add you name in a paragraph in the footer area.</li>
+      <li>Now create a CSS file to style the page. For each element on the page, use CSS to give it a background-color.
+        This may make the page look rather garishly colourful at this stage but will be useful for illustration as we
+        move forward. (It is also a useful debugging aid.) Add some CSS to make the font-size of the main heading
+        larger. The result should look something like Figure 4.1. <span class="solution">[<a href="code/chapter4/solutions/e3.html">Solution</a>]</span>
+         (Remember: when displaying the solution, you can right click on the web page and select the option to show the source code.)</li>
+      <li>Now experiment. In the CSS file, set a percentage width for some of the elements, e.g. <code
+          class="language-css">body { width: 50%; }  header h1 { width: 30%; }</code> The use of % (as covered in
+        lectures)
+        sets the width as a percentage of the parent element. See <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">Mozilla: width</a> for more info.</li>
+    </ol>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  &lt;title>Whatever you like &lt;/title>
+  &lt;!-- don't forget to link a .css file -->
+&lt;/head>
+&lt;body>
+  &lt;header>...&lt;/header>
+  &lt;main>...&lt;/main>
+  &lt;footer>...&lt;/footer>
+&lt;/body>
+&lt;/html></code>
+</pre>
+      <figcaption><span>Program Listing 4.1:</span> A website with three main areas.</figcaption>
+    </figure>
+
+    <h3>Flexible versus fixed width</h3>
+
+    <p>So far the web page you have developed is flexible in its display. The text reflows to fit the size of the window
+      &ndash; it is 'liquid', which means it occupies the full width of the browser
+      window irrespective of the size of the window or the device it is displayed on. A 'wrapper' can be used to offer
+      more control.</p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Add the following html around the header, main and footer elements:
+        <figure class="programcode clearboth">
+          <pre><code class="language-html">&lt;body>
+  &lt;div id="wrapper">
+    &lt;header>...&lt;/header>
+    &lt;main>...&lt;/main>
+    &lt;footer>...&lt;/footer>
+  &lt;/div>
+&lt;/body></code>
+        </pre>
+        </figure>
+      </li>
+      <li>
+        <p>Set the width of the wrapper &lt;div> to 320px in the linked CSS file:</p>
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">#wrapper {
+  width: 320px;
+  background-color: rgb(235,245,255);
+  margin: 0 auto;
+}</code>
+</pre>
+        </figure>
+        <figure class="right figsmall">
+          <img src="images/ch4_fixed_width.png" alt="a website">
+          <figcaption><span>Figure 4.2:</span> A fixed width website version of Figure 4.1.</figcaption>
+        </figure>
+        <p>The display width has become the size of a mobile phone (Figure 4.2). Everything fits into a width of 320
+          pixels. The
+          display is centred on the web page by using margin: 0 auto; This gives a margin of 0 at the top and bottom of
+          the wrapper element and automatically works out a margin for the left and right based on whatever space is
+          remaining once the wrapper element width has been calculated. <span class="solution">[<a href="code/chapter4/solutions/e3_wrapper.html">Solution</a>]</span></p>
+      </li>
+      <li class="clearboth">Change the width of the wrapper &lt;div> so that it is 100% of its parent element, i.e. the
+        body element,
+        which fills the width of the display area:
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">#wrapper {
+  width: 100%;
+  background-color: rgb(235,245,255);
+}</code>
+</pre>
+        </figure>
+        <p>Your page will grow to the size of the browser window and the text display should now be ‘liquid’ as the
+          browser window is resized &ndash; the text reflows to fit the available space. You can also reduce the size of
+          the window down to a small width and the display will try to cope. The next exercise addresses this.</p>
+      </li>
+      <li>
+        <p>Add the following property to the body element in the CSS file:
+      </li> <code class="language-css">body { min-width: 320px; }</code></p>
+      <p>
+        This will stop the body becoming less than 320px in width. You should check this by
+        resizing the browser window or using the Responsive Design Mode in your browser development tools &ndash; in
+        Firefox, select the hamburger menu on the top right of the
+        window, select Web Developer, then select Responsive Design Mode. <span class="solution">[<a href="code/chapter4/solutions/e3_wrapper2.html">Solution</a>]</span></p>
+      <p>You could also delete the wrapper div in this example and the effects would still be the same,
+        since the display will default to filling the whole width and the min-width property on the body element restricts 
+        the minimum width (<span class="solution">[<a href="code/chapter4/solutions/e4.html">Solution</a>]</span>).
+        However, the wrapper does give you more control since you could choose to only wrap the main 
+        and footer elements and allow the header area to fill the full width of the page.</p>
+      </li>
+    </ol>
+
+    <h2 id="4_2">4.2 Media queries</h2>
+
+    <p>Before embarking on this section, make sure the wrapper is set to width: 100% as in the last set of exercises. 
+      We'll use the wrapper in the following examples, but please do bear in mind the point made in the last exercise 
+      when you are making your own websites.
+    </p>
+
+    <p>Media queries can be used to give different behaviour for different-sized browser windows. Thus, we can define
+      some styles that are used for one browser width and then change them for a different browser width. Mobile-first
+      responsive web design means that we design for a mobile device <strong>first</strong>, i.e. we define the styles for the mobile
+      screen browser width, and then override some of those styles for desktop displays where the browser will be
+      displayed on a wider screen. 
+    </p>
+
+    <p>In the following CSS, the font-size for the header is initially defined as 2em. This
+      will be the value for browser widths up to and including 499 pixels. The styles in the subsequent media query
+      would
+      only be applied when the browser width is greater than or equal to 500px (i.e. 500 pixels). Thus, as you change
+      the width of the browser window or display the relevant webpage on devices of different width, you will get
+      different results if one is less than 500 pixels width and one is greater than 500 pixels wide.
+    </p>
+
+    <figure class="programcode clearboth">
+      <pre>
+<code class="language-css">header h1 {
+  font-size: 2rem; 
+  color: blue;
+}
+  
+@media screen and (min-width: 500px) {
+  header h1 {
+    font-size: 5rem;
+  }
+  /* more altered rules */
+}</code>
+</pre>
+    </figure>
+
+    <p>One other point to note in the above example is that we only override the font-size for larger screens. We do not override the font color and so that remains as blue. It is important that you understand that we may only need to override some properties.</p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>Add the above media query at the end of the stylesheet you used in the last exercise. As you change the
+        width
+        of your browser window you should see the size of the font in the header section change accordingly.</li>
+      <li>Now add some extra CSS rules to change other aspects of the display as the browser width varies.
+         You can add these inside the existing media query.
+      </li>
+      <li>At this stage the elements on the page fill the whole width of the browser window. At the end of your
+        CSS file, add a media rule such that when the width of the browser window is greater than or
+        equal to 1000px, the wrapper &lt;div> takes up a smaller percentage width of the display area, e.g.<br>
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">@media screen and (min-width: 1000px) {
+  #wrapper { width: 80%; margin: 0 auto; }
+}</code>
+</pre>
+        </figure>
+
+        This will centre the wrapper &lt;div> element on the browser window and also shows that we can have multiple media queries. 
+        <span class="solution">[<a href="code/chapter4/solutions/e5.html">Solution</a>]</span>
+      </li>
+    </ol>
+
+    <h2>High-res monitors</h2>
+
+    <p>For very high resolution monitors, the browser window can become very wide. This can affect a carefully designed
+      web page since it can be difficult to produce a design that scales between a mobile phone and a high resolution
+      desktop. One solution is to ignore the extra resolution by setting a maximum width for the body of the web page.
+      Thus, the design will always 'work' however big the monitor display resolution becomes.
+    </p>
+
+    <h3>Exercise</h3>
+    <ol>
+      <li>Set a max-width of 1400px for the body.
+      </li>
+    </ol>
+
+    <h2 id="4_3">4.3 Flexbox</h2>
+
+    <figure class="right figsmall">
+      <img src="images/ch4_flexbox.png" alt="illustration of flexbox">
+      <figcaption><span>Figure 4.3:</span> (left) width&lt;600px; different areas are stacked vertically; right width&gt;=600px; main content area is split into two separate side-by-side areas of content nested inside the main element.</figcaption>
+    </figure>
+
+    <p>Use the results from the previous section as the starting point for this section.
+    </p>
+
+    <p>A flexbox is very useful for Responsive Web Design. Consider a mobile phone and a standard desktop PC. The mobile
+      device is typically viewed in portrait mode, and has a limited width. The desktop PC monitor is typically viewed
+      in landscape and has a very wide monitor. How do we design for the two? One solution is to stack some
+      components of a design in a column for a mobile device and in a row for a desktop PC monitor, as illustrated in
+      Figure 4.3. A flexbox makes this
+      easy.</p>
+
+    <p>In Figure 4.3, a media query could be used to change the behaviour at a break point of, say, 600px. In Figure 4.3 (left), the
+      purple and green components are stacked vertically, whereas in Figure 4.3 (right) they are displayed horizontally. The
+      next exercise explores this. (A similar example is considered in lectures.)
+    </p>
+
+    <h3>Exercise</h3>
+
+    <ol>
+      <li>In the main section of your html document (corresponding to the red box in Figure 4.3), add a div and an aside
+        as follows:</p>
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-html">&lt;main>
+  &lt;div>
+    &lt;h1>Any title&lt;/h1>
+    &lt;p>The random text from before&lt;/p>
+    &lt;p>The random text from before&lt;/p>
+    &lt;p>The random text from before&lt;/p>
+  &lt;/div>
+  &lt;aside>
+    &lt;p>Some more random text&lt;/p>
+  &lt;/aside>  
+&lt;/main></code>
+</pre>
+        </figure>
+
+        <p>Now add the flexbox properties to the rule for main in the stylesheet for this html file:</p>
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">main {
+  display: flex;
+  flex-direction: column;
+  /* other properties */
+}</code>
+</pre>
+        </figure>
+
+        <p>To make it clear what is happening, change the background colour of the div and aside elements in main:</p>
+
+        <figure class="programcode clearboth">
+          <pre>
+<code class="language-css">main div {
+  background-color: rgb(100,200,100);
+}
+
+main aside {
+  background-color: rgb(200,100,100);
+}</code>
+</pre>
+        </figure>
+
+      </li>
+      <li>
+        Add a media query so that when the width of the browser window is greater than or
+        equal to 600px the flexbox direction property for main is set to display as a row.
+        As you resize the browser window you should see the change in display to reflect Figure 4.3.
+        <span class="solution">[<a href="code/chapter4/solutions/e6.html">Solution</a>]</span>
+      </li>
+      <li>Take a look at the following websites and experiment with some of the flexbox properties on the webpage you
+        have created so far:
+        <ul>
+          <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A complete guide to flexbox - CSS
+              tricks</a>
+          </li>
+          <li><a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Flexbox
+              by Mozilla</a></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2 id="4_4">4.4 Resizing images</h2>
+
+    <p>Start with your answer to the exercise before the last one in the previous section, i.e. before you added a div and aside to main.</p>
+
+    <p>When you add an image to a webpage, you may want it to change size to reflect the display area. For example, on a
+      mobile device, you may wish it to fill the width of the web page, whereas on a larger desktop PC display, you may
+      wish it to only occupy a certain width of the display area.</p>
+
+    <h3>Exercises</h3>
+
+    <figure class="right figsmall">
+        <img src="images/ch4_image_width.png" alt="illustration of media queries and image width">
+        <figcaption><span>Figure 4.4:</span> Altering the width of the image based on screen width using media queries.</figcaption>
+    </figure>
+
+    <ol>
+      <li>Add an image to the main area on a web page. (Hint: remember the img tag.)</li>
+      <li>Add two rules to a stylesheet attached to the web page with the image. The first rule should be for mobile
+        devices and should display the image at the full width of the main element on the web page. The second rule
+        should be a media query that applies when the screen is 500px or wider. Here, the image should only occupy a
+        small proportion of the width of the main element, e.g. 30%. Figure 4.4 shows the two views.
+        At this stage, don't worry about neatly placing the image
+         with regards surrounding text &ndash; we're just interested in how the width can be controlled using media queries.
+         <span class="solution">[<a href="code/chapter4/solutions/e7.html">Solution</a>]</span></li>
+    </ol>
+
+    <p>Sometimes it is useful to set a maximum width for an image, e.g. img { max-width: 200px; } This is especially
+      useful if the actual size of the image is small, since we don't want it to be scaled up so that it ends up looking
+      'blocky'.</p>
+
+    <p>The following information from Mozilla should be considered when styling imgs: <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Styling with CSS</a>. You should also look
+      at the article on <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive
+        images by Mozilla</a></p>
+
+
+    <h2 id="4_5">4.5 Responsive navs</h2>
+
+    <h3>Nav: all in a row</h3>
+
+    <figure>
+      <img src="images/ch4_nav.png" alt="adding a navigation bar">
+      <figcaption><span>Figure 4.5:</span> A navigation area.</figcaption>
+    </figure>
+
+    <p>Navigation areas typically look like the one shown in Figure 4.5 (right). We'll consider the problem
+      of
+      how to deal with many items in the navigation bar later. For now, we'll just deal with three items.</p>
+
+    <h3>Exercise</h3>
+    <ol>
+      <li><p>Add a nav element to the web page you have been developing in the previous exercises:</p>
+        
+          <figure class="programcode clearboth">
+              <pre><code class="language-html">&lt;body>
+  &lt;div id="wrapper">
+    &lt;header>...&lt;/header>
+    &lt;nav>...&lt;/nav>
+    &lt;main>...&lt;/main>
+    &lt;footer>...&lt;/footer>
+  &lt;/div>
+&lt;/body></code></pre>
+            </figure>
+
+        
+        <p>Add three random pieces of text in the navigation area to represent three links, but do not add anchor tags
+        to these:<br>
+        <pre><code class="language-html">&lt;ul>
+  &lt;li>Home&lt;/li>
+  &lt;li>First&lt;/li>
+  &lt;li>Second&lt;/li>
+&lt;/ul></code></pre> This will produce a standard list of three items in a column, as illustrated in Figure 4.5 (left).</p></li>
+
+      <li>The next step is to change the styling of the navigation area so that the list items are displayed in a row.
+        This can be done in a number of ways. The older approach is to change the styling of the ul and li elements
+        using list-style: none; and display: inline; in the CSS file &ndash; this was the approach used in Chapter 3.
+        The more recent approach uses a flexbox approach. 
+        Based on your understanding of a flexbox approach from Section 4.3, use display: flex to alter the display of 
+        the list items in the navigation area. (Hint: ul is the parent and li are the children.)
+         <span class="solution">[<a href="code/chapter4/solutions/e8.html">Solution</a>]</span></li>
+    </ol>
+
+    <h3>More items in the navigation bar</h3>
+
+    <p>As the number of items in the navigation bar grows, it becomes impossible to fit them all on one line. Also, how
+      many menu items should there be before submenus are used? A magic number of 7&plusmn;2 items is often suggested,
+      however, this has been <a
+        href="https://uxmyths.com/post/931925744/myth-23-choices-should-always-be-limited-to-seven">debunked</a>. <a
+        href="https://www.nngroup.com/articles/mega-menus-work-well/">Mega menus</a> have also been suggested, and the
+      article on <a
+        href="https://www.uis.edu/webservices/wp-content/uploads/sites/8/2013/02/Designing_for_Scent.pdf">scent of
+        information</a> is interesting.</p>
+    <p>There are lots of practical solutions to implementing responsive menus. You will need to choose a solution (and
+      justify it) as part of your module assignment work. The next exercise will suggest some resources to consult.</p>
+
+    <h3>Exercise</h3>
+    <ol>
+      <li>Increase the number of items in the navigation area to seven. Just add extra words like third,
+        fourth, etc.  The
+        layout of the navigation area may now ‘break’ (look wrong) when the browser window width is small or the items
+        in
+        the navigation area will wrap, increasing the size of the navigation area so that it dominates the small screen
+        size. This is a common problem when laying out navigation areas and different solutions have been proposed. The
+        articles at <a href="https://responsivenavigation.net/">https://responsivenavigation.net</a> and
+        <a
+          href="http://bradfrost.com/blog/web/responsive-nav-patterns/">http://bradfrost.com/blog/web/responsive-nav-patterns/</a>
+        present a range of these approaches. Read them and decide which approach you favour. You'll need to choose, attribute (check permissions and cite the source), justify and implement an
+        approach as part of the assignment you will be given for this module.</li>
+    </ol>
+
+    <h2 id="4_6">4.6 Grid</h2>
+    <p>In recent years, a grid layout approach has emerged to complement the flexbox approach. You should read the following
+       article which discusses their differences: <a href="https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/">Quick! What’s the Difference Between Flexbox and Grid?</a> by Chris Coyier, Feb 12, 2019. Again, you will have to choose if a grid approach or a flexbox approach should be used in your assignment and justify which approach you use.</p>
+
+    <h2 id="4_7">4.7 Further reading on Responsive Web Design</h2>
+
+    <ul>
+      <li><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">Google Responsive Web
+          Design Basics</a>, Pete LePage and Rachel Andrew, May 14, 2020 </li>
+      <li><a
+          href="https://developers.google.com/search/mobile-sites/?utm_source=wmc-blog&utm_medium=referral&utm_campaign=mobile-friendly">Google
+          mobile friendly</a>, Google Developers website [Last visited: 21 Sep 2020]</li>
+      <li><a
+          href="http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries/comment-page-1">Responsive
+          Design with CSS3 Media Queries</a>, Aigars Silkalns, Web Designer Wall, May 11, 2011
+      </li>
+      <li><a href="https://www.smashingmagazine.com/2013/03/building-a-better-responsive-website/">Building A Better
+          Responsive Website</a>, Jeremy Girard, Smashing Magazine, March 5, 2013
+      </li>
+      <li><a href="https://www.html5rocks.com/en/mobile/responsivedesign/">Creating a Mobile-First Responsive Web
+          Design</a>, Brad Frost, April 16th, 2012</li>
+    </ul>
+
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

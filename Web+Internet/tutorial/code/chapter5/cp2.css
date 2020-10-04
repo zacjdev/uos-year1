@@ -1,0 +1,55 @@
+:root {
+  --text_A: rgb(49,68,49);
+  --bkgrd_A: rgb(200,200,100);
+  --text_A_translucent: rgba(200, 200, 100, 0.85);
+  --bkgrd_main: rgb(240,240,160);
+}
+
+body {
+  margin: 0;
+  color: var(--text_A);
+}
+
+header {
+  padding: 0.5em 3%;
+  background-color: var(--bkgrd_A);
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  overflow: hidden;  /* or overflow: auto; see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing */
+  margin: 0;
+  padding: 0 3%;
+  background-color: var(--bkgrd_main);
+}
+
+main h1 {
+  font-size: 1.5em;
+}
+
+main h2 {
+  font-size: 1.2em;
+}
+
+main a {
+  color: inherit;
+  text-decoration: none;
+  background-color: var(--text_A_translucent);
+  box-shadow: 1px 1px 5px 2px var(--text_A_translucent);
+}
+
+main a:hover {
+  color: var(--bkgrd_main);
+}
+
+footer {
+  padding: 0.5em 3%;
+  background-color: var(--bkgrd_A);
+}
+
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Maddock" />
+  <meta name="description" content="The online tutorial for COM3503/4503/6503" />
+  <meta name="copyright" content="Steve Maddock" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 500px)">
+  
+  <!-- From https://prismjs.com -->
+  <link rel="stylesheet" href="css/prism.css">
+
+</head>
+
+<body id="chapter6">
+  <header>
+    <h1>COM1008: Practical labs</h1>
+  </header>
+
+  <div id="nav_main_wrapper">
+  
+  <nav id="nav_anchor">
+    <ul>
+      <li><a href="index.shtml" id="homenav">Home</a></li>
+      <li><a href="ch1.shtml" id="ch1nav">1. Introduction</a></li>
+      <li><a href="ch2.shtml" id="ch2nav">2. HTML and CSS basics</a></li>
+      <li><a href="ch3.shtml" id="ch3nav">3. Team X - a multi-page website</a></li>
+      <li><a href="ch4.shtml" id="ch4nav">4. More CSS for Responsive Web Design</a></li>
+      <li><a href="ch5.shtml" id="ch5nav">5. CSS Custom Properties</a></li>
+      <li><a href="ch6.shtml" id="ch6nav">6. JavaScript: beginnings</a></li>
+      <li><a href="ch7.shtml" id="ch7nav">7. JavaScript: Functions, Built-in objects, Arrays</a></li>
+      <li><a href="ch8.shtml" id="ch8nav">8. JavaScript: Forms, user interfaces and events</a></li>
+      <li><a href="ch9.shtml" id="ch9nav">9. JavaScript: Graphics and Interaction on the Canvas</a></li>
+      <li><a href="ch10.shtml" id="ch10nav">10. Summary</a></li>
+      <li class="li_extraspacebefore"><a href="acknowledgements.shtml" id="acknav">Acknowledgements</a></li>
+      <li class="li_extraspacebefore"><a href="appendixA_files_and_folders.shtml" id="appendixAnav">A: Files and folders</a></li>
+      <li><a href="appendixB_tools.shtml" id="appendixBnav">B: Tools</a></li>
+      <li><a href="appendixC_code.shtml" id="appendixCnav">C: All the examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div><a href="#" id="jumptotop">Jump to top</a></div>
+
+    
+    <h1>Chapter 6. JavaScript: beginnings</h1>
+
+    <p>This first chapter on JavaScript covers the basics: sequences of statements, simple calculations, conditional statements and loops. You will already have
+      covered these ideas in your Java Programming module. The aim is to make sure you understand the syntax required in
+      JavaScript. We'll move on to more advanced ideas in later chapters.</p>
+
+    <p><strong>Resources:</strong> Appendix C</p>
+
+    <p>We will opt for 'modern mode' JavaScript rather than 'sloppy mode' JavaScript. This means that the following will appear at the start of all JavaScript files:<br>
+      <pre><code class="language-javascript">"use strict";
+// now the code is in strict mode</code></pre>
+    </p>
+
+    <p>This can also be written as <code class="language-javascript">'use strict';</code>. Mozilla has <a href= "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">more details</a> about why we should use this.</p>
+
+    <p>JavaScript is covered in detail in lectures, so here we'll concentrate on some exercises. If you want a good tutorial on JavaScript to work through in advance of lectures, check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla's</a>. </p>
+    <p>In each of the following exercises, use the prompt command to get user input:</p>
+
+    <figure class="programcode clearboth">
+        <pre>
+<code class="language-javascript">var x = prompt("Type something: ");</code>
+</pre>
+      </figure>
+
+    <p>We'll cover the use of form elements for user input in a later chapter.</p>
+
+    <p>The following will be useful when attempting the exercises:</p>
+    <ul>
+      <li>The function <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat">parseFloat</a> (there is also a parseInt function)
+        can be used to convert a string into a floating point number, e.g.<br>
+        <code class="language-JavaScript">
+var fahrenheit = parseFloat(prompt("Fahrenheit?"));
+</code></li>
+      <li>The function <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed</a>
+        can be used to display a floating point number using fixed point notation.</li>
+      <li>For exercise 1, knowledge of the <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">division
+          operator</a> in JavaScript is required.</li>
+      <li>For exercises 4 and 5, the following <a
+          href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">character entity
+          references</a> will be useful: &ampsup2;, &ampsup3;, &amppound;, which, respectively, display &sup2;, &sup3; and &pound;.</li>
+    </ul>
+
+    <h2>Exercises</h2>
+
+    <ol>
+      <li>Write a JavaScript program that reads a temperature in Fahrenheit from the keyboard and displays the
+        equivalent in Celsius (centigrade). The formula for the conversion is: C= (F-32)*5/9. Your program should
+        display the temperature in Celsius to an accuracy of 4 decimal places.
+        <span class="solution">[<a href="code\chapter6\solutions\exercise1.html">Solution</a>]</span> (Remember: clicking on the link runs the solution. 
+        When the solution has run, right click on the webpage to view the source code.) </li>
+      <li>Write a JavaScript program that reads two numbers (call them <code class="d">x</code> and <code class="d">y</code>) input by the
+        user and copies them into variables called <code class="d">largest</code> and <code class="d">smallest</code>, such that
+        <code class="d">largest</code> contains the larger of <code class="d">x</code> and <code class="d">y</code> and <code class="d">smallest</code>
+        contains the smaller of <code class="d">x</code> and <code class="d">y</code>. Your program should display a message stating which
+        number is the larger and which is the smaller. 
+        <span class="solution">[<a href="code\chapter6\solutions\exercise2.html">Solution</a>]</span></li>
+      <li>Write a JavaScript program that reads a number input by a user and then displays the string 'Hello' that
+        number of times, e.g. if the user inputs 5, then 'Hello' will be displayed 5 times. 
+        <span class="solution">[<a href="code\chapter6\solutions\exercise3.html">Solution</a>]</span></li>
+      <li>Write a JavaScript program that displays a table of the integers between 1 and 10, their squares (i.e.
+        x&sup2) and their cubes (i.e. x&sup3). 
+        <span class="solution">[<a href="code\chapter6\solutions\exercise4.html">Solution</a>]</span></li>
+      <li>Write a JavaScript program that reads three numbers: an initial sum of money, a desired sum of money and an
+        annual rate of interest (expressed as a percentage). Your program should use a <code class="d">while</code> loop to
+        determine how many years it will take the investment to grow from the initial sum into the desired sum. 
+        <span class="solution">[<a href="code\chapter6\solutions\exercise5.html">Solution</a>]</span></li>
+    </ol>
+
+  </main>
+
+  </div> <!-- nav_main_wrapper -->
+
+  <!-- From https://prismjs.com -->
+  <script src="css/prism.js"></script>
+
+  <footer>
+
+    <div>
+      <p class="report_an_error"><a href="mailto:s.maddock@sheffield.ac.uk?subject=com1008 tutorial typos and errors&body=[content]" onclick="this.href =this.href.replace('[content]',window.location)">Report an error</a></p>
+    </div>
+    
+    <br>
+    
+    <div>
+      <div class="icons">
+      <a href="http://scholar.google.co.uk/citations?user=NbHpc-UAAAAJ&hl=en"><img alt="google scholar" height="22" src="./images_logos/Google_Scholar_logo_2015.png"></a>
+      <a href="https://www.researchgate.net/profile/Steve_Maddock/"><img height="22" src="./images_logos/RG_square_green.png"></a>
+      <a href="http://uk.linkedin.com/pub/steve-maddock/2/699/61a"><img alt="View Steve Maddock's LinkedIn profile" height="22" src="./images_logos/In-2C-14px.png"></a>
+      <a href="http://www.twitter.com/stevemaddock"><img alt="Follow stevemaddock on Twitter" height="22" src="./images_logos/Twitter_Logo_White_On_Blue.png"></a>
+      <a href="http://www.facebook.com/steve.maddock.549"><img alt="facebook" height="22" src="./images_logos/FB-f-Logo__blue_29.png"></a>
+      <a href="http://www.youtube.com/user/stevemaddock0114"><img alt="Subscribe to me on YouTube" height="22" src="./images_logos/YouTube-icon-full_color.png"></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="copyright">&copy; Steve Maddock, 2020</p>
+    </div>
+
+  </footer>
+  
+</body>
+
+</html>
