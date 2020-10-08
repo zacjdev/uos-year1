@@ -1,0 +1,34 @@
+public class Lab {
+	public static void main(String[] args) {
+
+	//Imports package for inputting numbers into a window
+	import javax.swing.JOptionPane;
+
+	//Asking user for number inputs
+	int num1 = Integer.valueOf(
+		JOptionPane.showInputDialog("Input number 1: ");
+	int num2 = Integer.valueOf(
+		JOptionPane.showInputDialog("Input number 2: ");
+
+	//Displays operation results as int data type
+	System.out.println("Integer results");
+	System.out.println(num1 + num2);
+	System.out.println(num1 * num2);
+	System.out.println(num1 - num2);
+	System.out.println(num1 / num2);
+	System.out.println(num1 % num2);
+	
+	//Conversion to double
+	num1 = Double.valueOf(num1);
+	num2 = Double.valueOf(num2);
+	
+	//Displays operation results as double data type
+	System.out.println("Integer results");
+	System.out.println(num1 + num2);
+	System.out.println(num1 * num2);
+	System.out.println(num1 - num2);
+	System.out.println(num1 / num2);
+	System.out.println(num1 % num2);
+	
+	
+}}
