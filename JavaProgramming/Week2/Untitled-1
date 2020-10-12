@@ -1,0 +1,12 @@
+import sheffield.*;
+
+public class Ex1b {
+    public static void main(String[] args) {
+        EasyReader keyboard = new EasyReader();
+        int miles = EasyReader.readInt("How many miles? ");
+        int yards = EasyReader.readInt("How many yards? ");
+        double kilometers = (miles) + ()
+        System.out.println(miles + "miles and " + yards + "yards equals " + kilometers + "km")
+
+    }
+}
