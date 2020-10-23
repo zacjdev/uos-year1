@@ -1,0 +1,14 @@
+import sheffield.*;
+
+public class Assignment1 {
+    public static void main(String[] args) {
+        EasyReader input = new EasyReader;
+        EasyWriter screen = new EasyWriter();
+        int cost = ((input.readDouble("How much is your shopping? ")) * 100).toInt();
+        int given = ((input.readDouble("How much cash did you offer? ")) * 100).toInt();
+        screen.println(cost + " " + given);
+
+
+    }
+}
+
